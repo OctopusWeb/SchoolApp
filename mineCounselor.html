@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    
+    	.counselor{width: 90%;background:#fff;margin-left: 5%;border-radius: 5px;height: auto;border:1px solid #ccc;float: left;margin-bottom:10px;}
+    	.counselor_first{margin-top:120px;}
+    	.counselor_last{margin-bottom:60px;}
+ 		
+    	.counselor .title{position:relative;width:90%;margin-left: 5%;height:60px;border-bottom:1px solid #ccc;float: left;}
+    	.counselor .title h2{font-size: 16px;margin-top:15px;float: left;width:70%}
+    	.counselor .title p{font-size: 14px;width:70%;float: left;}
+    	.counselor .title img{max-width:20%;height:50px;margin-top:5px;float: left;margin-right:3%}
+    	
+    	.counselor .num{position: absolute;right:0;top:20px;} 
+    	.counselor .num b{color:#00A1D8;font-size: 24px;font-weight: lighter;}
+    	.counselor .num span{color:#333;font-size: 16px;}
+    	.counselor .content{width:90%;height:auto;margin-left:5%;float: left;}
+    	.counselor .content ul{float: left;height:auto;width:100%;margin-top:10px;margin-bottom: 10px;}
+    	.counselor .content ul li{float: left;width:100%;height:22px;}
+    	.counselor .content ul li h2{float: left;font-size: 12px;}
+    	.counselor .content ul li:last-child h1:last-child{color: #00A1D8;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我关注的顾问</h1>
+	</div>
+	<div class="counselor counselor_first">
+		<div class="title">
+			<img src="images/headimg.jpg" alt="" />
+			<h2>姓名：王晓晓</h2>
+			<p>王小二本人擅长法律辩护</p>
+			<div class="num"><b>6</b><span>&nbsp;年</span></div>
+		</div>
+		<div class="content">
+			<ul>
+				<li><h2>账号：</h2><h2>123456789</h2></li>
+				<li><h2>手机：</h2><h2>12213131235</h2></li>
+				<li><h2>QQ：</h2><h2>123123123</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>公司：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>擅长能力：</h2><h2>美国本科 美国本科 美国本科	</h2></li>
+				<li><h2>签名：</h2><h2>签名就是我的签名签名就是我的就是</h2></li>
+			</ul>
+		</div>
+	</div>
+	<div class="counselor">
+		<div class="title">
+			<img src="images/headimg.jpg" alt="" />
+			<h2>姓名：王晓晓</h2>
+			<p>王小二本人擅长法律辩护</p>
+			<div class="num"><b>6</b><span>&nbsp;年</span></div>
+		</div>
+		<div class="content">
+			<ul>
+				<li><h2>账号：</h2><h2>123456789</h2></li>
+				<li><h2>手机：</h2><h2>12213131235</h2></li>
+				<li><h2>QQ：</h2><h2>123123123</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>公司：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>擅长能力：</h2><h2>美国本科 美国本科 美国本科	</h2></li>
+				<li><h2>签名：</h2><h2>签名就是我的签名签名就是我的就是</h2></li>
+			</ul>
+		</div>
+	</div>
+	<div class="counselor">
+		<div class="title">
+			<img src="images/headimg.jpg" alt="" />
+			<h2>姓名：王晓晓</h2>
+			<p>王小二本人擅长法律辩护</p>
+			<div class="num"><b>6</b><span>&nbsp;年</span></div>
+		</div>
+		<div class="content">
+			<ul>
+				<li><h2>账号：</h2><h2>123456789</h2></li>
+				<li><h2>手机：</h2><h2>12213131235</h2></li>
+				<li><h2>QQ：</h2><h2>123123123</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>公司：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>擅长能力：</h2><h2>美国本科 美国本科 美国本科	</h2></li>
+				<li><h2>签名：</h2><h2>签名就是我的签名签名就是我的就是</h2></li>
+			</ul>
+		</div>
+	</div>
+	<div class="counselor counselor_last">
+		<div class="title">
+			<img src="images/headimg.jpg" alt="" />
+			<h2>姓名：王晓晓</h2>
+			<p>王小二本人擅长法律辩护</p>
+			<div class="num"><b>6</b><span>&nbsp;年</span></div>
+		</div>
+		<div class="content">
+			<ul>
+				<li><h2>账号：</h2><h2>123456789</h2></li>
+				<li><h2>手机：</h2><h2>12213131235</h2></li>
+				<li><h2>QQ：</h2><h2>123123123</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>公司：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h2>擅长能力：</h2><h2>美国本科 美国本科 美国本科	</h2></li>
+				<li><h2>签名：</h2><h2>签名就是我的签名签名就是我的就是</h2></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      		for(var i=0;i<mui(".counselor").length;i++){
+      			counselorEvent(i)
+      		}
+      		function counselorEvent(i){
+      			mui(".counselor")[i].addEventListener("tap",function(){
+      				mui.openWindow({
+		  				url:"service2C.html",
+		  				id:"service2C"
+		  			})
+      			})
+      		}
+      	})
+    </script>
+</html>

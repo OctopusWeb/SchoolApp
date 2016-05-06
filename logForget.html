@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;font-family: "微软雅黑";list-style: none;font-weight: 400;}
+    	.mui-bar{height: 50px;background: #008BE6;}
+    	.mui-bar a{color: #fff;top: 10px;}
+    	.mui-bar h1{color: #fff;top: 10px;}
+    	.mui-content{margin-top: 10px;}
+    	.mui-content .mui-input-row{background: #fff;margin-top: 10px;height: 40px;}
+    	.mui-content .mui-input-row input{border: none;font-size: 14px;}
+    	.mui-content .mui-input-row button{width: 100px;height: 30px;position: absolute;z-index: 100;top: 5px;right: 5px;
+    							font-size: 12px;padding: 0;}
+    	.mui-content #finish{background: #008BE6;width: 90%;float: left;margin-left: 5%;margin-top: 10px;}
+    	.mui-content .mobile{width: 100%;float: left;height: 30px;}
+    	.mui-content .mobile h1{font-size: 12px;float: left;color: #5b5b5b;margin-left: 5%;line-height: 15px;}
+    	.mui-content .mobile h2{font-size: 12px;float: left;color: #5b5b5b;line-height: 15px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">重置密码</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mobile"><h1>请输入手机号和验证码，并设置新的登录密码</h1></div>
+		<div class="mui-input-row">
+			<input type="number" placeholder="手机号">
+			<button type="button" class="mui-btn mui-btn-primary">获取验证码</button>
+		</div>
+		<div class="mui-input-row">
+			<input type="number" placeholder="验证码">
+		</div>
+		<div class="mui-input-row mui-password">
+			<input type="password" class="mui-input-password" placeholder="新密码">
+		</div>
+		<button type="button" class="mui-btn mui-btn-primary" id="finish">完成</button>
+	</div>
+</body>
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+</script>
+</html>

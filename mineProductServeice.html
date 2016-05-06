@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    	.head span{float:right;margin-right:15px;color:dodgerblue;line-height: 40px;}
+    
+    	.product{width: 90%;background:#fff;margin-left: 5%;border-radius: 5px;height: auto;border:1px solid #ccc;float: left;margin-bottom:10px;}
+    	.product_first{margin-top:120px;}
+    	.product_last{margin-bottom:60px;}
+ 		
+    	.product .title{position:relative;width:90%;margin-left: 5%;height:60px;border-bottom:1px solid #ccc;float: left;}
+    	.product .title h2{font-size: 16px;margin-top:15px;}
+    	.product .title p{font-size: 12px;}
+    	.product .num{position: absolute;right:0;top:20px;} 
+    	.product .num b{color:#00A1D8;font-size: 20px;font-weight: lighter;}
+    	.product .num span{color:#333;font-size: 14px;}
+    	.product .content{width:90%;height:auto;margin-left:5%;float: left;}
+    	.product .content img{height:120px;margin-top:10px;float: left;margin-right:3%;max-width: 31%;display: inline-block;}
+    	.product .content ul{float: left;height:auto;width:66%;margin-top:10px;margin-bottom: 10px;}
+    	.product .content ul li{float: left;width:100%;height:22px;}
+    	.product .content ul li h2{float: left;font-size: 12px;}
+    	.product .content ul li h1{float: left;font-size: 14px;}
+    	.product .content ul li:last-child{margin-top:8px;}
+    	.product .content ul li:last-child h1:last-child{color: #00A1D8;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我的产品服务</h1>
+	    <span>发布</span>
+	</div>
+	<div class="product product_first">
+		<div class="title">
+			<h2>大家一起出来春游活动</h2>
+			<p>地址：北京市海淀区海淀区</p>
+			<div class="num"><b>123</b><span>人报名</span></div>
+		</div>
+		<div class="content">
+			<img src="images/minep.jpg" alt="" />
+			<ul>
+				<li><h2>分类：</h2><h2>春季游行</h2></li>
+				<li><h2>时间：</h2><h2>2016-05-05</h2></li>
+				<li><h2>资金：</h2><h2>10元起</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h1>状态：</h1><h1>正在进行</h1></li>
+			</ul>
+		</div>
+	</div>
+	<div class="product">
+		<div class="title">
+			<h2>大家一起出来春游活动</h2>
+			<p>地址：北京市海淀区海淀区</p>
+			<div class="num"><b>123</b><span>人报名</span></div>
+		</div>
+		<div class="content">
+			<img src="images/minep.jpg" alt="" />
+			<ul>
+				<li><h2>分类：</h2><h2>春季游行</h2></li>
+				<li><h2>时间：</h2><h2>2016-05-05</h2></li>
+				<li><h2>资金：</h2><h2>10元起</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h1>状态：</h1><h1>正在进行</h1></li>
+			</ul>
+		</div>
+	</div>
+	<div class="product">
+		<div class="title">
+			<h2>大家一起出来春游活动</h2>
+			<p>地址：北京市海淀区海淀区</p>
+			<div class="num"><b>123</b><span>人报名</span></div>
+		</div>
+		<div class="content">
+			<img src="images/minep.jpg" alt="" />
+			<ul>
+				<li><h2>分类：</h2><h2>春季游行</h2></li>
+				<li><h2>时间：</h2><h2>2016-05-05</h2></li>
+				<li><h2>资金：</h2><h2>10元起</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h1>状态：</h1><h1>正在进行</h1></li>
+			</ul>
+		</div>
+	</div>
+	<div class="product product_last">
+		<div class="title">
+			<h2>大家一起出来春游活动</h2>
+			<p>地址：北京市海淀区海淀区</p>
+			<div class="num"><b>123</b><span>人报名</span></div>
+		</div>
+		<div class="content">
+			<img src="images/minep.jpg" alt="" />
+			<ul>
+				<li><h2>分类：</h2><h2>春季游行</h2></li>
+				<li><h2>时间：</h2><h2>2016-05-05</h2></li>
+				<li><h2>资金：</h2><h2>10元起</h2></li>
+				<li><h2>地址：</h2><h2>北京市海淀区海淀区</h2></li>
+				<li><h1>状态：</h1><h1>正在进行</h1></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      		for(var i=0;i<mui(".product").length;i++){
+      			productEvent(i)
+      		}
+      		function productEvent(i){
+      			mui(".product")[i].addEventListener("tap",function(){
+      				mui.openWindow({
+		  				url:"mineProductServeiceC.html",
+		  				id:"mineProductServeiceC"
+		  			})
+      			})
+      		}
+      	})
+    </script>
+</html>

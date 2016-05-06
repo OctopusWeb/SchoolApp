@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+
+    <style>
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.top{float: left;width: 60%;border-bottom: 1px #ccc solid;height: 25px;background: #fff;border-radius: 5px;
+    	border: 1px solid #00A1D8;margin: 5px 20%;overflow: hidden;}
+    	.top h1{float: left;width: 50%;font-size: 12px;line-height: 25px;color: #00A1D8;text-align: center;margin: 0;}
+    	.top .selected{background: #00A1D8;color: #fff;}
+    	.recomen{float: left;width: 100%;}
+    	.recomen img{float: left;width: 50%;border-right: 1px #ccc solid;border-top: 1px #ccc solid;}
+    	.time{width: 100%;float: left;}
+    	.time h1{width: 50%;float: left;text-align: center;font-size: 14px;line-height: 30px;color: #b5b5b5;
+    	border-bottom: 1px #ccc solid;}
+    	.time .selected{color: #00A1D8;border-bottom: 2px #00A1D8 solid;}
+    	.time h2{float: left;width: 100%;font-size: 14px;color: #5b5b5b;line-height: 30px;padding-left: 10px;background: #fff;
+    	border-bottom: 1px #ccc solid;margin: -5px 0;}
+    	.time .recomanLi{width: 100%;float: left;border-top: 1px #ccc solid;background: #fff;position: relative;margin-top: 5px;}
+    	.time .recomanLi img{width: 30%;float: left;padding: 5px;}
+    	.time .recomanLi h3{width: 45%;float: left;font-size: 16px;font-weight: 600;color: #5b5b5b;line-height: 25px;}
+    	.time .recomanLi h4{width: 25%;float: left;font-size: 14px;line-height: 25px;}
+    	.time .recomanLi h4 strong{color: red;font-size: 16px;line-height: 20px;}
+    	.time .recomanLi h5{font-size: 12px;color: #00A1D8;line-height: 12px;float: left;width: 70%;margin: 0;}
+    	.time .recomanLi h6{width: 70%;float: left;font-size: 12px;color: #5b5b5b;}
+    	.time .recomanLi .recomanInfo{width: 70%;float: left;border-top: 1px #ccc solid;margin-top: 5px;padding-top: 2px;height: 30px;overflow: hidden;}
+    	.time .recomanLi p{line-height: 20px;color: #5b5b5b;float: left;}
+    	.time .recomanLi p strong{color: red;}
+    	.time .recomanLi span{font-size: 12px;color: #00A1D8;float: right;margin-right: 10px;}
+    	.time .recomanLi .mui-btn{width: 50px;height: 20px;font-size: 12px;padding: 0;float: right;margin-top: 2px;}
+    	
+    	.addTalk{position: fixed;height: 80px;width: 18px;background: #00A1D8;left: 0;z-index: 100;color: #fff;font-size: 12px;text-align: center;padding-top: 8px;
+    	border-radius: 3px;top: 50%;margin-top: -40px;line-height: 16px;}
+    	.now{display: block;}
+    	.will{display: none;}
+    </style>
+</head>
+<body>
+	<div class="top">
+		<h1 class="selected">活动列表</h1>
+		<h1>产品服务</h1>
+	</div>
+	<div class="recomen">
+		<img src="images/tuijian1.jpg"/>
+		<img src="images/tuijian1.jpg"/>
+		<img src="images/tuijian1.jpg"/>
+		<img src="images/tuijian1.jpg"/>
+	</div>
+	<div class="time">
+		<div class="addTalk">发布活动</div>
+		<h1 class="selected">正在进行</h1>
+		<h1>即将进行</h1>
+		<div class="now">
+			<h2>其他活动</h2>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>剩余： <strong>5</strong>天</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>剩余： <strong>5</strong>天</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>剩余： <strong>5</strong>天</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>剩余： <strong>5</strong>天</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>剩余： <strong>5</strong>天</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+		</div>
+		<div class="will">
+			<h2>其他活动</h2>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>即将开始</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>即将开始</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>即将开始</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>即将开始</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+			<div class="recomanLi">
+				<img src="images/minep.jpg"/>
+				<h3>涂敏旅游就选它</h3>
+				<h4>即将开始</h4>
+				<h5>地址：北京市朝阳区朝阳区</h5>
+				<h6>发起人：王小二</h6>
+				<div class="recomanInfo">
+					<p>人均<strong>￥:5</strong>元起</p>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">报名</button>
+					<span><strong>76</strong>人参加</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" charset="UTF-8">
+ (function($) {
+  	mui.init();
+  	mui.plusReady(function() {
+  		for(var i=0;i<mui(".recomanLi").length;i++){
+  			recomanEvent(i);
+  		}
+  		for(var i=0;i<mui(".mui-btn-outlined").length;i++){
+  			baoming(mui(".mui-btn-outlined"),i)
+  		}
+  		mui(".addTalk")[0].addEventListener("tap",function(){
+  			mui.openWindow({
+  				url:"releaseQues.html",
+  				id:"releaseQues"
+  			})
+  		})
+  		function baoming(cla,i){
+  			cla[i].addEventListener("tap",function(e){
+  				e.stopPropagation();
+  				if(cla[i].innerHTML=="报名"){
+  					cla[i].innerHTML="已报名"
+  				}else{
+  					cla[i].innerHTML="报名"
+  				}
+  			})
+  		}
+  		function recomanEvent(i){
+  			mui(".recomanLi")[i].addEventListener("tap",function(){
+  				mui.openWindow({
+  					url:"serveiceC.html",
+  					id:"serveiceC"
+  				})
+  			})
+  		}
+  		mui(".top h1")[1].addEventListener("tap",function(){
+  			mui.openWindow({
+  				url:"service2.html",
+  				id:"service2"
+  			})
+  		})
+ 		mui(".time h1")[0].addEventListener("tap",function(){
+ 			mui(".time h1")[0].className="selected";
+ 			mui(".time h1")[1].className="";
+ 			mui(".now")[0].style.display="block";
+ 			mui(".will")[0].style.display="none";
+ 			
+ 		})
+ 		mui(".time h1")[1].addEventListener("tap",function(){
+ 			mui(".time h1")[1].className="selected";
+ 			mui(".time h1")[0].className="";
+ 			mui(".now")[0].style.display="none";
+ 			mui(".will")[0].style.display="block";
+ 		})
+ 	
+  	})
+})(mui);
+</script>
+</html>

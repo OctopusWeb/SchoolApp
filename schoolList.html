@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-content{width: 100%;float: left;}
+    	
+    	#item1mobile .questions{width: 100%;float: left;background: #f2fafd;border-top: 1px #ccc solid;}
+    	#item1mobile .title{color:#00A1D8;width: 100%;float: left;font-size: 16px;margin-left: 5%;padding: 5px 0;}
+    	#item1mobile .questions .questionLi{width: 100%;padding: 10px 5%;position: relative;}
+    	#item1mobile .questions .questionLi .head{width: 15%;float: left;}
+    	#item1mobile .questions .questionLi .head img{width: 100%;float: left;}
+    	#item1mobile .questions .questionLi .head h1{width: 100%;text-align: center;float: left;font-size: 12px;color: #b5b5b5;}
+    	#item1mobile .questions .questionLi .word{width: 85%;float: left;height: 45px;overflow: hidden;position: relative;}
+    	#item1mobile .questions .questionLi .word p{font-size: 12px;padding-left: 10px;height: auto;}
+    	#item1mobile .questions .questionLi .word span{position: absolute;background: #f2fafd;font-size: 12px;color: #00A1D8;
+    	right: 2%;bottom: 3px;}
+    	#item1mobile .questions .questionLi .info{width: 85%;float: right;margin-bottom: 10px;}
+    	#item1mobile .questions .questionLi .info p{float: left;font-size: 12px;border: 1px #ccc solid;margin: 0;
+    	padding: 0px 5px;margin-left: 8px;color: #ccc;}
+    	#item1mobile .questions .questionLi .info span{float: right;color: #b5b5b5;font-size: 12px;line-height: 15px;margin-right: 10px;
+    	width: auto;margin-top: 5px;}
+    	#item1mobile .questions .questionLi .info h5{float: left;font-size:12px ;color: #ccc;margin-left: 8px;}
+    	#item1mobile .questions .questionLi .info img{float: right;width: 15px;margin-right: 5px;margin-top: 5px;}
+    	#item1mobile .questions .questionLi .talkMore{float: left;width: 100%;
+    	background: #f4f4f4;border-radius: 3px;padding-bottom: 10px;}
+    	#item1mobile .questions .questionLi .talkMore img{width: 15px;float: left;margin: 5px;}
+    	#item1mobile .questions .questionLi .talkMore p{float: left;margin:2px 5px;font-size: 12px;}
+    	#item1mobile .questions .questionLi .talkMore h1{float: right;margin-right:10px;font-size: 14px;color: #00A1D8;margin-top: 5px;}
+    	#item1mobile .questions .questionLi .talkMore .reply{float: left;width: 100%;position: relative;height: 35px;overflow: hidden;}
+    	#item1mobile .questions .questionLi .talkMore .reply h2{float: left;width: 20%;text-align: right;font-size: 12px;color: #00A1D8;line-height: 16px;}
+    	#item1mobile .questions .questionLi .talkMore .reply h3{float: left;width: 75%;font-size: 12px;line-height: 16px;}
+    	#item1mobile .questions .questionLi .talkMore .reply span{position: absolute;bottom: 0px;width: 70px;color: #00A1D8;
+    	right: 5px;font-size: 12px;background: #f4f4f4;line-height: 14px;}
+    	#item1mobile .questions .questionLi .talkMore  h4{width: 100%;text-align: center;float: left;color: #00A1D8;
+    	font-size: 14px;margin-top: 10px;margin-bottom: 0;display: block;}
+    	#item1mobile .questions .questionLi .talkHide{display: none;}
+    	
+    	#item1mobile .questions2{background: #fff;}
+    	#item1mobile .questions2 .questionLi .word span{background: #fff;}
+    	#item1mobile .questions2 .questionLi .word{width: 100%;}
+    	#item1mobile .questions2 .questionLi .word p{float: left;padding-left: 0;}
+    	#item1mobile .questions2 .questionLi .info{width: 100%;}
+    	
+    	#item2mobile .schoolLi{width: 100%;float: left;border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;margin-top: 3px;position: relative;background: #fff;}
+    	#item2mobile .schoolLi .logo{width: 50px;height: 50px;position: absolute;top: 50%;margin-top: -25px;left: 10px;}
+    	#item2mobile .schoolLi .schoolInfo{float: left;width: 80%;padding:5px 0 5px 65px}
+    	#item2mobile .schoolLi .schoolInfo img{float: left;width: 15px;margin: 3px 3px 0 0;}
+    	#item2mobile .schoolLi .schoolInfo h1{float: left;width: 90%;font-size: 14px;color: #333;font-weight: 600;margin: 0;line-height: 20px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	#item2mobile .schoolLi .schoolInfo h2{float: left;width: 100%;font-size: 12px;color: #00A1D8;margin: 0;line-height: 20px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	#item2mobile .schoolLi .schoolInfo h3{float: left;width: 100%;font-size: 12px;color: #5b5b5b;margin: 0;line-height: 20px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	#item2mobile .schoolLi .mui-btn{width: 18%;float: left;font-size: 12px;height: 25px;padding-top: 0;padding: 0;
+    	border-radius: 3px;margin-top: 20px;}
+    	#nav{width: 100%;float: left;}
+    	
+    	.addTalk{position: fixed;height: 80px;width: 18px;background: #00A1D8;left: 0;z-index: 100;color: #fff;font-size: 12px;text-align: center;padding-top: 8px;
+    	border-radius: 3px;top: 50%;margin-top: -40px;line-height: 16px;}
+    </style>
+</head>
+<body>
+	
+	<div class="mui-content">
+	    <div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll" id="nav">
+						<a class="mui-control-item mui-active" href="#item1mobile" id="nav1">
+							院校点评
+						</a>
+						<a class="mui-control-item" href="#item2mobile" id="nav2">
+							院校信息
+						</a>
+					</div>
+				</div>
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div class="addTalk">院校点评</div>
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view" id="ul1">
+								<li class="questions">
+									<h1 class="title">热门点评</h1>
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<h5>|2016-03-24</h5>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</li>
+						    	<li class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<h5>|2016-03-24</h5>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</li>
+						    	
+						    	<li class="questions questions2">
+						    		<h1 class="title">其他点评</h1>
+						    		<div class="questionLi">
+						    			
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<h5>|2016-03-24</h5>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</li>
+						    	<li class="questions questions2">
+						    		<div class="questionLi">
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<h5>|2016-03-24</h5>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</li>
+						    	<li class="questions questions2">
+						    		<div class="questionLi">
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<h5>|2016-03-24</h5>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</li>
+						    </ul>
+						</div>
+					</div>	
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view" id="ul2">
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+ <script type="text/javascript" charset="UTF-8">
+ (function($) {
+  	mui.init();
+  	mui.plusReady(function() {
+  		$('.mui-scroll-wrapper').scroll({
+			bounce: false,
+			indicators: true
+		});
+		for(var i=0;i<mui(".seeAll").length;i++){
+  			seeAll(i);
+  		}
+		for (var i=0;i<mui(".talk").length;i++) {
+  			talkShow(i);
+  		}
+  		for (var i=0;i<mui(".talkMore h4").length;i++) {
+  			talkHide(i);
+  		}
+  		for(var i=0;i<mui(".schoolInfo").length;i++){
+  			schoolInfo(i);
+  		}
+  		for(var i=0;i<mui(".word").length;i++){
+  			word(i);
+  		}
+  		for(var i=0;i<mui(".mui-btn").length;i++){
+  			btnWay(i);
+  		}
+  		function btnWay(i){
+  			mui(".mui-btn")[i].addEventListener("tap",function(){
+	  			if(mui(".mui-btn")[i].innerHTML=="立即申请"){
+	  				alert("申请已提交")
+	  				mui(".mui-btn")[i].innerHTML="已申请"
+	  			}else if(mui(".mui-btn")[i].innerHTML=="已申请"){
+	  				alert("已取消申请")
+	  				mui(".mui-btn")[i].innerHTML="立即申请"
+	  			}else{
+	  				mui.openWindow({
+		  				url:"releaseQues.html",
+		  				id:"releaseQues"
+		  			})
+	  			}
+  			})
+  		}
+  		mui(".addTalk")[0].addEventListener("tap",function(){
+  			mui.openWindow({
+  				url:"releaseQues.html",
+  				id:"releaseQues"
+  			})
+  		})
+  		function word(i){
+  			mui(".word")[i].addEventListener("tap",function(){
+  				mui.openWindow({
+  					url:"questionsInfo.html",
+  					id:"questionsInfo"
+  				})
+  			})
+  		}
+  		function schoolInfo(i){
+  			mui(".schoolInfo")[i].addEventListener("tap",function(){
+  				mui.openWindow({
+  					url:"schoolInfos.html",
+  					id:"schoolInfos"
+  				})
+  			})
+  		}
+		function seeAll(i){
+  			mui(".seeAll")[i].addEventListener("tap",function(e){
+  				e.stopPropagation();
+  				if(mui(".seeAll")[i].innerHTML=="......收起"){
+  					mui(".seeAll")[i].innerHTML="......查看全部"; 
+  					mui(".seeAll")[i].parentNode.style.height="45px";
+  				}else{
+  					mui(".seeAll")[i].innerHTML="......收起"; 
+  					mui(".seeAll")[i].parentNode.style.height="auto";
+  				}
+  			})
+  		}
+		function talkShow(i){
+  			mui(".talk")[i].addEventListener("tap",function(){
+  				mui(".talkMore")[i].className="talkMore";
+  			})
+  		}
+  		function talkHide(i){
+  			mui(".talkMore h4")[i].addEventListener("tap",function(){
+  				mui(".talkMore")[i].className="talkMore talkHide";
+  			})
+  		}
+	})	
+})(mui);	
+</script>
+</html>

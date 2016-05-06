@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    	.head span{float:right;margin-right:15px;color:dodgerblue;line-height: 40px;}
+    	
+    	.photo{width:100%;height:100px;text-align: center;float: left;margin-top:105px;background: #fff;}
+    	.photo img{height:80%;margin-top:10px;}
+    	
+    	.menu{width:100%;height:auto;background:#fff;float: left;border-top:1px solid #ccc;}
+    	.menu ul {width:100%;height:auto;float: left;}
+    	.menu ul li{width: 100%;height:46px;float: left;line-height:46px;border-bottom:1px solid #ccc;position: relative;}
+    	.menu ul li a{color:#555;margin-left:3%;font-size:16px;}
+    	.menu ul li span{float:right;margin-right:10px;line-height: 46px;font-size:18px;color: #555;}
+    	.menu ul li p{float: right;}
+    	.menu ul li input{float: right;width: 100%;position: absolute;background: none;border: none;text-align: right;left: 0;top: 0;
+    	padding-right: 30px;line-height: 30px;font-size: 12px;}
+    	.menu .tip{width:100%;height:auto;float:left;background: #fff;}
+    	.menu .tip h2{color:#555;font-size:16px;margin-left:3%;margin-top:10px;}
+    	.menu .tip textarea{float: left;width:94%;margin-top:8px;margin-left:3%;background: #f5f5f5;height: 100px;}
+    	.menu button{background: #00a1d8;width:94%;margin-left:3%;margin-bottom:60px;height:40px;color:#fff;font-size:18px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">完善资料</h1>
+	    <span>编辑</span>
+	</div>
+	<div class="photo">
+		<img src="images/headimg.jpg" alt="" />
+	</div>
+	<div class="menu">
+		<ul>
+			<li><a>姓名</a><span class="mui-icon mui-icon-arrowright"></span><input type="text" value="用户名"></li>
+			<li><a>账号</a><span class="mui-icon mui-icon-arrowright"></span><input type="text" value="1232311232@qq.com"></li>
+			<li><a>手机</a><span class="mui-icon mui-icon-arrowright"></span><input type="number" value="1232311232"></li>
+			<li><a>QQ</a><span class="mui-icon mui-icon-arrowright"></span><input type="number" value="1232311232"></li>
+			<li><a>地址</a><span class="mui-icon mui-icon-arrowright"></span><input type="text" value="北京市朝阳区"></li>
+		</ul>
+		<div class="tip">
+			<h2>备注</h2>
+			<textarea name="" rows="" cols=""></textarea>
+		</div>
+		<button>确认保存</button>
+	</div>
+
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      	})
+    </script>
+</html>

@@ -6,11 +6,37 @@
     <title></title>
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	html,body{width: 100%;height: 100%;position: relative;}
+    	.mui-content{background: #008be6;width: 100%;height: 100%;}
+    	.mui-content img{width: 80%;position: absolute;margin-left: 7%;top: 15%;}
+    	.mui-content button{position: absolute;bottom: 15%;width: 40%;margin-left: 7%;color: #008BE6;height: 40px;font-size: 20px;}
+    	.mui-content .mui-btn-outlined{right: 7%;color: #fff;}
+    </style>
 </head>
 <body>
-	
+	<div class="mui-content">
+		<img src="images/logo.png"/>
+	    <button type="button" class="mui-btn">注册</button>
+		<button type="button" class="mui-btn mui-btn-outlined">登录</button>
+	</div>
 </body>
+<script type="text/javascript">
+	mui.init();
+	mui.plusReady(function() {
+		mui(".mui-btn")[0].addEventListener("tap",function(){
+			mui.openWindow({
+				url:"reg.html",
+				id:"reg"
+			})
+		});
+		mui(".mui-btn")[1].addEventListener("tap",function(){
+			mui.openWindow({
+				url:"log1.html",
+				id:"log1"
+			})
+		})
+	})
+</script>
 </html>

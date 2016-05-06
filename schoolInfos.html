@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    	.head span{float:right;margin-right:15px;color:dodgerblue;line-height: 40px;}
+    	
+    	.mui-content{float: left;margin-top: 60px;padding-bottom: 20px;background: #fff;}
+    	.schoolInfo{float: left;width: 100%;background: #fff;padding:0 5px 10px 5px;}
+    	.schoolInfo h1{width: 100%;font-size: 14px;color: #333;font-weight: 600;margin-top: 10px;width: 90%;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolInfo h2{width: 100%;font-size: 12px;color: #333;width: 90%;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolInfo .schoolImg{width: 35%;float: left;padding-right: 5px;}
+    	.schoolInfo .schoolImg img{width: 100%;float: left;}
+    	.schoolInfo h3{float: left;width: 65%;font-size: 12px;line-height: 18px;margin: 0;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolInfo h3 strong{color: #00A1D8;}
+    	.talk{width: 100%;float: left;padding-top: 10px;background: #fff;}
+    	.talk .mui-btn{width: 25%;height: 25px;font-size: 12px;padding: 0;margin-left: 10px;}
+    	.talk .talk1{float: right;width: 30%;}
+    	.talk h4{float: right;font-size: 20px;color: #ff8a00;margin: 0;}
+    	.talk h5{float: right;color: #333;margin-right: 5px;font-size: 12px;}
+    	.talk img{float: right;width: 20px;margin-right: 5px;}
+    	
+    	.schoolMessage{width: 100%;float: left;background: #fff;}
+    	.schoolMessage h1{width: 100%;line-height: 30px;color: #fff;font-size: 14px;background: #00A1D8;padding-left: 5px;}
+    	.schoolMessage p{width: 90%;float: left;margin-left: 5%;font-size: 12px;line-height: 16px;}
+    	.schoolMessage p strong{color: #00A1D8;}
+    	.schoolMessage h2{float: left;width: 45%;font-size: 12px;color: #333;margin-left: 5%;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolMessage h2 strong{color: #00A1D8;}
+    	.schoolMessage span{padding-left: 5%;font-size: 12px;}
+    	.schoolMessage .schoolSpan{width: 90%;float: left;margin-left: 5%;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">院校详情</h1>
+	    <span>分享</span>
+	</div>
+	<div class="mui-content">
+	    <div class="schoolInfo">
+	    	<h1>沃拉沃拉天主教学校迪塞尔斯中学</h1>
+	    	<h2>Walla Walla Catholic Schools-Desales High School</h2>
+	    	<div class="schoolImg">
+	    		<img src="images/head.png"/>
+	    	</div>
+	    	<h3>学校类型：<strong>寄宿中学 | 大学预备 | 男女混校</strong></h3>
+	    	<h3>年级人数：<strong>9-12年级 | 409 名学生</strong></h3>
+	    	<h3>教学师资：<strong>1:8 的师生比例 | 90% 的教师高级学位</strong></h3>
+	    	<h3>州及城市：	<strong>加利福尼亚州 | 洛杉矶 (Los Angeles)</strong></h3>
+	    	<h3>学校网站：	<strong>http://www.webb.org</strong></h3>
+	    	<h3>每年费用：	<strong>寄宿 ：$53,575      走读 ：$38,100</strong></h3>
+	    	<div class="talk">
+		    	<button type="button" class="mui-btn mui-btn-primary">收藏此校</button>
+				<button type="button" class="mui-btn mui-btn-success">立即申请</button>
+				<div class="talk1">
+					<img src="images/talk.jpg"/>
+					<h5>评论</h5>
+					<h4>67</h4>
+				</div>
+			</div>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>院校信息</h1>
+	    	<p>	韦伯学校成立于1922年，位于美国加利福尼亚州的克莱蒙(Claremont)镇，是一所高质量的美国私立中学。学校从美国各州和世界各地招收优秀学生。自学校成立以来，学校为社会输出了许多优秀人才。除了确保学生以优异的成绩进入大学深造以外，韦伯学校还坚持换位思考为教学核心理念，实行个性化教育，鼓励学生的发现性思维，同时培养学生男女平等，尊重他人的优良传统。欧佳谷中学是美国西岸地区最先提供寄宿的学校之一，创建于1911年，以其充满乐趣、丰富多彩的课程以及各种活动而闻名。学校获加利福尼亚州独立学校联合会及美国寄宿制学校联合会认证。通过该校所设计的坚实的学业课程，同时学校对于读写技巧、自信和领导能力等方面的培养，学生得以进入诸多世界著名的大学。学业课程及课外活动内容丰富，兼顾均衡发展，开设了包括校际体育活动、户外训练、美术及表演艺术，还有马术等课程。招收3到12年级的学生，学校景色壮丽，风景旖旎。 
+<br />   webb’s mission as a boarding school has remained unchanged for nearly a century: to graduatehonorable leaders who build lives dedicated toservice and distinction. Webb 
+			</p>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>详情介绍</h1>
+	    	<p>	webb’s mission as a boarding school has remained unchanged for nearly a century: to graduatehonorable leaders who build lives dedicated toservice and distinction. Webb graduates students advanced in the arts and humanities, math and sciences, and the social sciences. Our college placement into the Ivy League, into the best women’s colleges and small national liberal arts colleges, and, in fact, into the top ten percent of all colleges and universities nationwide, remains remarkable. But I believe the proof of our promise as a school is found in our alumni. We count among our ranks some 4,000 alumni that cross the country and span the globe. Webb alumni are a tight-knit community of successful professionals—doctors and lawyers, scholars and teachers, politicians and entrepreneurs, servant-leaders of every type.
+—— <strong>学校校长：Taylor Stockdale</strong>  </p>
+			<p>	webb’s mission as a boarding school has remained unchanged for nearly a century: to graduatehonorable leaders who build lives dedicated toservice and distinction. Webb graduates students advanced in the arts and humanities, math and sciences, and the social sciences. Our college placement into the Ivy League, into the best women’s colleges and small national liberal arts colleges, and, in fact, into the top ten percent of all colleges and universities nationwide, remains remarkable. But I believe the proof of our promise as a school is found in our alumni. We count among our ranks some 4,000 alumni that cross the country and span the globe. Webb alumni are a tight-knit community of successful professionals—doctors and lawyers, scholars and teachers, politicians and entrepreneurs, servant-leaders of every type.
+—— <strong>学校校长：Taylor Stockdale</strong> </p>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>总体概况</h1>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>性别类型 <strong>男女混校</strong></h2>
+	    	<h2>邻近城市 <strong>洛杉矶 (Los Angeles)</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>年级学生</h1>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>性别类型 <strong>男女混校</strong></h2>
+	    	<h2>邻近城市 <strong>洛杉矶 (Los Angeles)</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>教学师资</h1>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>性别类型 <strong>男女混校</strong></h2>
+	    	<h2>邻近城市 <strong>洛杉矶 (Los Angeles)</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>经济预算</h1>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>性别类型 <strong>男女混校</strong></h2>
+	    	<h2>邻近城市 <strong>洛杉矶 (Los Angeles)</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>AP课程</h1>
+	    	<div class="schoolSpan">
+	    		<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+	    	</div>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>体育活动</h1>
+	    	<div class="schoolSpan">
+	    		<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+		    	<span>美国历史(United States History) </span>
+	    	</div>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>住宿情况</h1>
+	    	<p>	韦伯学校成立于1922年，位于美国加利福尼亚州的克莱蒙(Claremont)镇，是一所高质量的美国私立中学。学校从美国各州和世界各地招收优秀学生。自学校成立以来，学校为社会输出了许多优秀人才。除了确保学生以优异的成绩进入大学深造以外，韦伯学校还坚持换位思考为教学核心理念，实行个性化教育，鼓励学生的发现性思维，同时培养学生男女平等，尊重他人的优良传统。欧佳谷中学是美国西岸地区最先提供寄宿的学校之一，创建于1911年，以其充满乐趣、丰富多彩的课程以及各种活动而闻名。学校获加利福尼亚州独立学校联合会及美国寄宿制学校联合会认证。通过该校所设计的坚实的学业课程，同时学校对于读写技巧、自信和领导能力等方面的培养，学生得以进入诸多世界著名的大学。学业课程及课外活动内容丰富，兼顾均衡发展，开设了包括校际体育活动、户外训练、美术及表演艺术，还有马术等课程。招收3到12年级的学生，学校景色壮丽，风景旖旎。 
+			</p>
+	    </div>
+	    <div class="schoolMessage">
+	    	<h1>联系方式</h1>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>性别类型 <strong>男女混校</strong></h2>
+	    	<h2>邻近城市 <strong>洛杉矶 (Los Angeles)</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    	<h2>学校类型 <strong>大学预备</strong></h2>
+	    </div>
+	    <div class="talk">
+	    	<button type="button" class="mui-btn mui-btn-primary">收藏此校</button>
+			<button type="button" class="mui-btn mui-btn-success">立即申请</button>
+			<div class="talk1">
+				<img src="images/talk.jpg"/>
+				<h5>评论</h5>
+				<h4>67</h4>
+			</div>
+		</div>
+	</div>
+		
+</body>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      	for(var i=0;i<mui(".mui-btn-primary").length;i++){
+      		changeWord(mui(".mui-btn-primary"),i,"收藏此校","已收藏");
+  		}
+      	for(var i=0;i<mui(".mui-btn-success").length;i++){
+      		changeWord(mui(".mui-btn-success"),i,"立即申请","已申请");
+  		}
+      	function changeWord(cla,i,a,b){
+      		cla[i].addEventListener("tap",function(){
+	  			if(cla[i].innerHTML==a){
+	  				for(var j=0;j<cla.length;j++){
+	  					cla[j].innerHTML=b
+	  				}
+	  			}else{
+	  				for(var j=0;j<cla.length;j++){
+	  					cla[j].innerHTML=a
+	  				}
+	  			}
+  			})
+      	}
+      	for(var i=0;i<mui(".talk1").length;i++){
+      		mui(".talk1")[i].addEventListener("tap",function(){
+      			mui.openWindow({
+	  				url:"releaseQues.html",
+	  				id:"releaseQues"
+	  			})
+      		})	
+      	}
+
+      	})
+    </script>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	body{background: #fff;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+		
+		.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    	.head span{float:right;margin-right:15px;color:dodgerblue;line-height: 40px;}
+    	
+    	.info{float: left;width: 100%;background: #fff;margin-top: 105px;position: relative;height: 120px;border-bottom: 1px #ccc solid;}
+    	.info img{float: left;padding: 10px;border-radius: 50%;height: 100px;}
+    	.info h1{width: 60%;float: left;font-size: 14px;margin: 0;line-height: 30px;margin-top: 10px;}
+    	.info h1 strong{color: #00A1D8;}
+    	.info h2 strong{color: #00A1D8;}
+    	.info h2{width:60%;float: left;font-size: 12px;}
+    	.info h3{float: left;background: #00A1D8;position: absolute;line-height: 120px;top: -5px;right: 0;font-size: 16px;
+    			color: #fff;width: 20%;text-align: center;}
+    	
+    	.list{width: 100%;background: #fff;float: left;margin-top: 5px;border-top: 1px #ccc solid;}	
+    	.list .listTitle{float: left;width: 80%;margin-left: 10%;}	
+    	.list .listTitle h1{width: 25%;float: left;font-size: 12px;line-height: 25px;border: 1px #00A1D8 solid;text-align: center;
+    	color: #00A1D8;border-left: none;}
+    	.list .listTitle h1:first-child{border-left: 1px #00A1D8 solid;}
+    	.list .listTitle .selected{background: #00A1D8;color: #fff;}
+    	.list .listContent{width: 100%;float: left;display: none;}
+    	.list .listContent .content{width: 100%;border-top: 1px #ccc solid;padding: 0 10px;float: left;}
+    	.list .listContent .content h1{float: left;width: 70%;font-size: 14px;color: #000;line-height: 30px;margin: 0;}
+    	.list .listContent .content h2{float: left;width: 70%;font-size: 12px;color: #5b5b5b;line-height: 20px;
+    		white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis; overflow: hidden;margin: 0;}
+    	.list .listContent .content p{width: 30%;float: left;font-size: 12px;text-align: right;line-height: 25px;
+    		color: #b5b5b5;margin: 0;}
+    	.list .listContent .content span{width: 30%;float: left;font-size: 12px;text-align: right;line-height: 25px;
+    		color: #b5b5b5;margin: 0;}
+    	.list .listContent h3{font-size: 12px;width: 33.3%;text-align: center;float: left;}
+    	.list .listContent h4{font-size: 12px;width: 33.3%;text-align: center;float: left;color: #5b5b5b;}
+    	.list .listContented{display: block;}
+    	
+    	.foot{bottom: 0;height: 40px;}
+    	.foot h3{float: left;width: 50%;text-align: center;color: #fff;font-size: 14px;line-height: 30px;}
+    	.foot h3:first-child{border-right: 1px #fff solid;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">顾问信息</h1>
+	</div>
+	<div class="foot mui-bar">
+		<h3>电话咨询</h3>
+		<h3>咨询预约</h3>
+	</div>
+	<div class="info">
+		<img src="images/head.png"/>
+		<h1>姓名：<strong>王小二</strong></h1>
+		<h2>手机：<strong>15512345678</strong></h2>
+		<h2>邮箱：<strong>12345678@qq.com</strong></h2>
+		<h2>能力：<strong>美国本科  美国本科</strong></h2>
+		<h3>关注TA</h3>
+	</div>
+	<div class="list">
+		<div class="listTitle">
+			<h1 class="selected">录取学生</h1>
+			<h1>发布问答</h1>
+			<h1>院校点评</h1>
+			<h1>发布动态</h1>
+		</div>
+		<div class="listContent listContented">
+			<div>
+				<h3>姓名</h3><h3>录取院校</h3><h3>时间</h3>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+				<h4>王小二</h4><h4>清华大学</h4><h4>2016-05-01</h4>
+			</div>
+		</div>
+		<div class="listContent">
+			<div class="content">
+				<h1>1111为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+			<div class="content">
+				<h1>1111为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+			<div class="content">
+				<h1>1111为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+		</div>
+		<div class="listContent">
+			<div class="content">
+				<h1>2222为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+			<div class="content">
+				<h1>2222为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+			<div class="content">
+				<h1>2222为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+		</div>
+		<div class="listContent">
+			<div class="content">
+				<h1>3333为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+			<div class="content">
+				<h1>3333为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+			<div class="content">
+				<h1>3333为什么花儿这样红</h1>
+				<p>共16个回答</p>
+				<h2>为什么花儿这样红为什么这样红为什么呢</h2>
+				<span>2016-04-11</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		for(var i=0;i<mui(".listTitle h1").length;i++){
+      			listEvent(i)
+      		}
+      		for(var i=0;i<mui(".content").length;i++){
+      			quesEvent(i)
+      		}
+      		function quesEvent(i){
+      			mui(".content")[i].addEventListener("tap",function(){
+      				mui.openWindow({
+						url:"questionsInfo.html",
+						id:"questionsInfo"
+					})
+      			})      			
+      		}
+      		function listEvent(i){
+      			mui(".listTitle h1")[i].addEventListener("tap",function(){
+      				for(var j=0;j<mui(".listTitle h1").length;j++){
+		      			mui(".listTitle h1")[j].className=""
+		      			mui(".listContent")[j].className="listContent"
+		      		}
+      				mui(".listTitle h1")[i].className="selected"
+      				mui(".listContent")[i].className="listContent listContented"
+      			})
+      		}
+      		mui(".foot h3")[0].addEventListener("tap",function(){
+      			plus.device.dial( "10086", false );
+      		})
+      		mui(".foot h3")[1].addEventListener("tap",function(){
+      			mui.openWindow({
+					url:"releaseQues.html",
+					id:"releaseQues"
+				})
+      		})
+      		mui(".info h3")[0].addEventListener("tap",function(){
+      			if(mui(".info h3")[0].innerHTML=="关注TA"){
+      				mui(".info h3")[0].innerHTML="已关注"
+      			}else{
+      				mui(".info h3")[0].innerHTML="关注TA"
+      			}
+      		})
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      	})
+    </script>
+</html>

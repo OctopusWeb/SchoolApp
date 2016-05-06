@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    
+    	.top{width:100%;height:auto;float: left;margin-top:105px;text-align: center;border-bottom: 1px solid #ccc;}
+    	.top h1{margin-top:30px;font-size: 40px;color: #555;}
+    	.top h1 img{height:18px;}
+
+   		
+   		.mineTitle{width: 100%;float: left;border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;}
+   		.mineTitle h1{width: 33.3%;float: left;border-left: 1px #ccc solid;font-size: 14px;margin: 0;line-height: 30px;}
+    	.mineTitle h1:first-child{border-left: none;}
+   		.mineContent h2{width: 33.3%;float: left;font-size: 12px;margin: 0;line-height: 30px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我的积分</h1>
+	</div>
+	<div class="top">
+		<h1><img src="images/jiangbei.jpg"/>20.00</h1>
+		<p>我的积分</p>
+		<div class="mineTitle">
+			<h1>时间</h1><h1>积分变动</h1><h1>积分详情</h1>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+		<div class="mineContent">
+			<h2>2012-04-15</h2><h2>+15</h2><h2>积分详情</h2>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      	})
+    </script>
+</html>

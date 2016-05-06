@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+    <style>
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	html,body{position: relative;height: 100%;width: 100%;padding-bottom: 65px;}
+    	.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+    	
+    	.mui-bar{box-shadow: none;border-bottom: 1px #ccc solid;}
+    	.mui-bar a{color: #5b5b5b;}
+    	
+    	.mui-content{width: 100%;float: left;padding-bottom: 125px;}
+    	.questionLi{width: 100%;float: left;margin-top: 5px;background: #fff;border-top: 1px #ccc solid;
+    	border-bottom: 1px #ccc solid;position: relative;}
+    	.questionLi .head{width: 15%;float: left;margin-top: 10px;}
+    	.questionLi .head img{float: left;width: 90%;margin-left:10%;}
+    	.questionLi .head h1{float: left;width: 100%;font-size:12px;color: #00A1D8;text-align: center;}
+    	.questionLi .content{width: 80%;float: left;margin-top: 5px;padding-left: 10px;position: relative;height: auto;overflow: hidden;}
+    	.questionLi .content p{font-size: 12px;color: #5b5b5b;}
+    	.questionLi .content img{width: 18%;float: left;margin-left: 2%;padding-bottom: 20px;}
+    	.questionLi .questionInfo{width: 85%;float: left;margin-left: 15%;}
+    	.questionLi .questionInfo h4{font-size: 12px;line-height: 14px;border: 1px #ccc solid;color: #ccc;width: auto;float: left;
+    							padding: 0 5px;margin-left: 10px;}
+    	.questionLi .questionInfo span{float: right;font-size: 12px;color: #ccc;margin-right: 10px;}
+    	.questionLi .questionInfo img{float: right;width: 15px;margin-top: 5px;margin-right: 10px;}	
+    	.comments{float: left;width: 100%;}
+    	.comments h1{width: 100%;float: left;line-height: 30px;border-bottom: 1px #ccc solid;font-size: 14px;color: #00A1D8;
+    	padding-left: 10px;margin: 0;}		
+    	.comments .commentsLi{width: 100%;float: left;border-bottom: 1px #ccc solid;background: #fff;}	
+    	.comments .commentsLi img{width: 15%;float: left;padding: 10px 0 0 10px;}
+    	.comments .commentsLi h2{float: left;font-size: 12px;color: #00A1D8;padding: 5px;padding-bottom: 0;}		
+    	.comments .commentsLi h3{float: left;font-size: 12px;color: #b5b5b5;padding: 5px;padding-bottom: 0;}		
+    	.comments .commentsLi h4{float: left;font-size: 12px;color: #5b5b5b;width: 80%;padding-left: 5px;line-height: 16px;}		
+    
+    	.foot{bottom: 65px;width: 100%;height: 40px;background: #b5b5b5;position: fixed;}
+    	.foot input{height: 30px;float: left;margin-top: 5px;width: 94%;margin-left: 3%;font-size: 12px;
+    	padding: 0;padding-left: 5px;border-radius: 0;border: 0;}
+    	.foot .mui-icon-chat{position: absolute;bottom: 0px;font-size: 18px;color: #b5b5b5;right: 8%;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">问答详情</h1>
+	</header>
+	<div class="foot mui-bar">
+		<input type="text" placeholder="评论">
+		<span class="mui-icon mui-icon-chat"></span>
+	</div>
+	<div class="mui-content">
+	    <div class="questionLi">
+	    	<div class="head">
+	    		<img src="images/head.png"/>
+	    		<h1>章子怡</h1>
+	    	</div>
+	    	<div class="content">
+	    		<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+	    		<img src="images/head.png"  data-preview-src="" data-preview-group="1" />
+	    		<img src="images/head.png"  data-preview-src="" data-preview-group="1" />
+	    		<img src="images/head.png"  data-preview-src="" data-preview-group="1" />
+	    		<img src="images/head.png"  data-preview-src="" data-preview-group="1" />
+	    	</div>
+	    	<div class="questionInfo">
+				<h4>最热</h4><h4>热门</h4>
+				<span>1</span>
+				<img src="images/talk.png"/>
+				<span>分享</span>
+				<img src="images/enjoy.png"/>
+				<span>1</span>
+				<img src="images/like.png"/>
+	    	</div>
+	    </div>
+	    <div class="comments">
+	    	<h1>评论(21)</h1>
+	    	<div class="commentsLi">
+	    		<img src="images/head.png"/>
+	    		<h2>燕燕</h2><h3>|北京市朝阳区朝阳区朝阳区</h3>
+	    		<h4>雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业</h4>
+	    	</div>
+	    	<div class="commentsLi">
+	    		<img src="images/head.png"/>
+	    		<h2>燕燕</h2><h3>|北京市朝阳区朝阳区朝阳区</h3>
+	    		<h4>雨，虽看似很有前途，但实际使用问题太多。很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业</h4>
+	    	</div>
+	    	<div class="commentsLi">
+	    		<img src="images/head.png"/>
+	    		<h2>燕燕</h2><h3>|北京市朝阳区朝阳区朝阳区</h3>
+	    		<h4>雨，虽看似很有前途，但实际使用问题太多。但我们从未放用问题太多虽看未放弃，我们加入了W3C，发起了中国产业</h4>
+	    	</div>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript" src="js/mui.zoom.js" ></script>
+<script type="text/javascript" src="js/mui.previewimage.js" ></script>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	window.onload=function(){
+      		mui.previewImage();
+      	}
+      	mui.plusReady(function() {
+	    })
+    </script>
+</html>

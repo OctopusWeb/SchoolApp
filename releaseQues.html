@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+    	
+    	.foot{bottom: 0;background: #fff;height: 50px;}
+    	.foot ul{float: left;width: 100%;height: 50px;}
+    	.foot ul li{width: 20%;text-align: center;float: left;}
+    	.foot ul li img{width: 30%;float: left;margin-left: 35%;margin-top: 8px;}
+    	.foot ul li h1{width: 100%;float: left;text-align: center;font-size: 12px;color: #5B5B5B;}
+    	.foot ul li h2{width: 100%;float: left;text-align: center;font-size: 12px;color: #00A1D8;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	
+	
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init({
+      		 subpages:[{
+		      url:'releaseQuesList.html',
+		      id:'questionsList',
+		      styles:{
+		        top:'65px',//mui标题栏默认高度为45px；
+		        bounce: 'vertical',
+		        bounceBackground:"#ffffff"
+		      }
+		    }]
+      	});
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      	})
+    </script>
+</html>

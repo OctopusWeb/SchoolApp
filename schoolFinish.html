@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    	.head span{float:right;margin-right:15px;color:dodgerblue;line-height: 40px;}
+
+		.mui-content{width: 100%;float: left;background: #fff;margin-top: 55px;}
+		.mui-content .title{width: 100%;float: left;}
+		.mui-content .title h1{float: left;width: 50%;background: #f5f5f5;font-size: 14px;color: #00A1D8;line-height: 30px;
+		text-align: center;border-bottom: 1px #ccc solid;}
+		.mui-content .title .selected{background: #00A1D8;color: #fff;}
+		.mui-content .content1{float: left;width: 100%;float: left;}
+		.mui-content .content1 .content1Li{width: 100%;float: left;border-bottom: 1px #ccc solid;padding: 5px 0;}
+		.mui-content .content1 h1{width: 100%;padding:0 5%;float: left;margin: 0;line-height: 20px;font-size: 14px;color: #5b5b5b;white-space:nowrap; 
+		text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;font-weight: 600;}
+		.mui-content .content1 h1 strong{color: #00A1D8;}
+		.mui-content .content1 p{height: 40px;float: left;overflow: hidden;font-size: 12px;width: 100%;margin: 0;padding: 0 5%;}
+    	
+    	.mui-content .content2{display: none;width: 100%;float: left;}
+    	.schoolLi{width: 100%;float: left;border-top: 1px #ccc solid;border-bottom: 1px #ccc solid;margin-top: 3px;position: relative;background: #fff;}
+    	.schoolLi .logo{width: 50px;height: 50px;position: absolute;top: 50%;margin-top: -25px;left: 10px;}
+    	.schoolLi .schoolInfo{float: left;width: 80%;padding:5px 0 5px 65px}
+    	.schoolLi .schoolInfo img{float: left;width: 15px;margin: 3px 3px 0 0;}
+    	.schoolLi .schoolInfo h1{float: left;width: 90%;font-size: 14px;color: #333;font-weight: 600;margin: 0;line-height: 20px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolLi .schoolInfo h2{float: left;width: 100%;font-size: 12px;color: #00A1D8;margin: 0;line-height: 20px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolLi .schoolInfo h3{float: left;width: 100%;font-size: 12px;color: #5b5b5b;margin: 0;line-height: 20px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+    	.schoolLi .mui-btn{width: 18%;float: left;font-size: 12px;height: 25px;padding-top: 0;padding: 0;
+    	border-radius: 3px;margin-top: 20px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">搜索结果</h1>
+	</div>
+	<div class="mui-content">
+	    <div class="title">
+	    	<h1 class="selected">问答(65)</h1>
+	    	<h1>院校(23)</h1>
+	    </div>
+	    <div class="content">
+	    	<div class="content1">
+	    		<div class="content1Li">
+	    			<h1>经风雨，虽看似很有前途，但实际   <strong>使用问题</strong> 太多，DCloud了无数坑放弃，我们加入了W3C，发</h1>
+	    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+	    		</div>
+	    		<div class="content1Li">
+	    			<h1>经风雨，虽看似很有前途，但实际   <strong>使用问题</strong> 太多，DCloud了无数坑放弃，我们加入了W3C，发</h1>
+	    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+	    		</div>
+	    		<div class="content1Li">
+	    			<h1>经风雨，虽看似很有前途，但实际   <strong>使用问题</strong> 太多，DCloud了无数坑放弃，我们加入了W3C，发</h1>
+	    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+	    		</div>
+	    		<div class="content1Li">
+	    			<h1>经风雨，虽看似很有前途，但实际   <strong>使用问题</strong> 太多，DCloud了无数坑放弃，我们加入了W3C，发</h1>
+	    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+	    		</div>
+	    		<div class="content1Li">
+	    			<h1>经风雨，虽看似很有前途，但实际   <strong>使用问题</strong> 太多，DCloud了无数坑放弃，我们加入了W3C，发</h1>
+	    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+	    		</div>
+	    	</div>
+	    	<div class="content2">
+	    		<div class="schoolLi">
+					<img src="images/head.png" class="logo"/>
+					<div class="schoolInfo">
+						<img src="images/choose.png"/>
+						<h1>麻省理工学院</h1>
+						<h2>Massachusetts Institute of Technology</h2>
+						<h3>所在地:加州大学河滨校区</h3>
+						<h3>宿费:$4700|走读：$4000</h3>
+						<h3>学校类型:走读学校|大学预备|男女混校</h3>
+					</div>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+					<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+				</div>
+				<div class="schoolLi">
+					<img src="images/head.png" class="logo"/>
+					<div class="schoolInfo">
+						<img src="images/choose.png"/>
+						<h1>麻省理工学院</h1>
+						<h2>Massachusetts Institute of Technology</h2>
+						<h3>所在地:加州大学河滨校区</h3>
+						<h3>宿费:$4700|走读：$4000</h3>
+						<h3>学校类型:走读学校|大学预备|男女混校</h3>
+					</div>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+					<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+				</div>
+				<div class="schoolLi">
+					<img src="images/head.png" class="logo"/>
+					<div class="schoolInfo">
+						<img src="images/choose.png"/>
+						<h1>麻省理工学院</h1>
+						<h2>Massachusetts Institute of Technology</h2>
+						<h3>所在地:加州大学河滨校区</h3>
+						<h3>宿费:$4700|走读：$4000</h3>
+						<h3>学校类型:走读学校|大学预备|男女混校</h3>
+					</div>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+					<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+				</div>
+	    	</div>
+	    </div>
+	</div>
+	
+</body>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      		mui(".title h1")[0].addEventListener("tap",function(){
+      			mui(".title h1")[0].className="selected";
+      			mui(".title h1")[1].className="";
+      			mui(".content1")[0].style.display="block";
+      			mui(".content2")[0].style.display="none";
+      		});
+      		mui(".title h1")[1].addEventListener("tap",function(){
+      			mui(".title h1")[0].className="";
+      			mui(".title h1")[1].className="selected";
+      			mui(".content1")[0].style.display="none";
+      			mui(".content2")[0].style.display="block";
+      		})
+      		
+      		for(var i=0;i<mui(".mui-btn").length;i++){
+	  			btnWay(i);
+	  		}
+      		for(var i=0;i<mui(".schoolInfo").length;i++){
+	  			schoolInfo(i);
+	  		}
+      		for(var i=0;i<mui(".content1Li").length;i++){
+	  			releaseInfo(i);
+	  		}
+      		function btnWay(i){
+	  			mui(".mui-btn")[i].addEventListener("tap",function(){
+		  			if(mui(".mui-btn")[i].innerHTML=="立即申请"){
+		  				alert("申请已提交")
+		  				mui(".mui-btn")[i].innerHTML="已申请"
+		  			}else if(mui(".mui-btn")[i].innerHTML=="已申请"){
+		  				alert("已取消申请")
+		  				mui(".mui-btn")[i].innerHTML="立即申请"
+		  			}else{
+		  				mui.openWindow({
+			  				url:"releaseQues.html",
+			  				id:"releaseQues"
+			  			})
+		  			}
+	  			})
+	  		}
+      		function schoolInfo(i){
+	  			mui(".schoolInfo")[i].addEventListener("tap",function(){
+	  				mui.openWindow({
+	  					url:"schoolInfos.html",
+	  					id:"schoolInfos"
+	  				})
+	  			})
+	  		}
+      		function releaseInfo(i){
+	  			mui(".content1Li")[i].addEventListener("tap",function(){
+	  				mui.openWindow({
+	  					url:"questionsInfo.html",
+	  					id:"questionsInfo"
+	  				})
+	  			})
+	  		}
+      	})
+    </script>
+</html>

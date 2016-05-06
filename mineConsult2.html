@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style type="text/css">
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.mui-bar{height: 65px;background: #00a1d8;}
+    	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
+    	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
+    	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
+    	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
+    	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
+    	
+    	.head{width:100%;height:40px;background: #f4f4f4;float: left;position:fixed;left:0;top:65px;}
+    	.head a{margin-left:2%;color:#555;}
+    
+    	.answer{width: 94%;background:#fff;margin-left: 3%;border-radius: 5px;height: auto;border:1px solid #ccc;float: left;margin-bottom:10px;}
+    	.answer_first{margin-top:115px;}
+    	.answer_last{margin-bottom:60px;}
+    	
+    	.answer .content{float: left;width:94%;margin-left:3%;height:auto;}
+    	.answer .content h4{font-size: 15px;line-height:25px;margin-top:10px;height:50px;overflow: hidden;margin-bottom:8px;}
+    	.answer .content p{float: left;display:inline-block;width:70%;font-size: 12px;line-height:14px;padding-left:2%;border-left: 1px solid #ccc;}
+    	.answer .content span{float: right;font-size: 12px;width:30%;line-height: 14px;text-align: right;color: #8f8f94;}
+    	.answer .return{position:relative;padding-bottom: 10px;width:100%;height:auto;background: #F5F5F5;float:left;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+    	.answer .return h3{float:left;font-size: 14px;color: #00A1D8;width:20%;text-align: right;
+    				line-height:20px;display: inline-block;margin-top:10px;margin-bottom: 0;}
+    	.answer .return p{color:#555;float: left;width:65%;text-align: left;display: inline-block;line-height:20px;margin-top:10px;margin-bottom: 0;}
+    	.answer .return span{width:10%;margin-right:3%;font-size: 14px;color: #00A1D8;float: right;line-height:20px;margin-top:10px;}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="高中网" />
+		</div>
+		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
+			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+		</div>
+		<div class="choose">
+			<span class="mui-icon-list mui-icon"></span>
+			<h1>筛选</h1>
+		</div>
+	</header>
+	<div class="head mui-bar">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我的咨询预约</h1>
+	</div>
+	<div class="answer answer_first">
+		
+		<div class="content">
+			<h4>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去</h4>
+			<p>天津市河北区新苑小区2号楼</p><span>2016-01-01</span>
+		</div>
+		<div class="return">
+			<h3>我：</h3><p>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签</p>
+			<h3>旺旺：</h3><p>好</p>
+			<h3>我：</h3><p>问答分类标签去问答分类标签</p>
+			<span>回复</span>
+		</div>
+	</div>
+	<div class="answer">
+		
+		<div class="content">
+			<h4>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去</h4>
+			<p>天津市河北区新苑小区2号楼</p><span>2016-01-01</span>
+		</div>
+		<div class="return">
+			<h3>我：</h3><p>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签</p><span>回复</span>
+			<h3>旺旺：</h3><p>好</p><span>回复</span>
+			<h3>我：</h3><p>问答分类标签去问答分类标签</p>
+			<span>回复</span>
+		</div>
+	</div>
+	<div class="answer">
+		
+		<div class="content">
+			<h4>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去</h4>
+			<p>天津市河北区新苑小区2号楼</p><span>2016-01-01</span>
+		</div>
+		<div class="return">
+			<h3>我：</h3><p>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签</p><span>回复</span>
+			<h3>旺旺：</h3><p>好</p><span>回复</span>
+			<h3>我：</h3><p>问答分类标签去问答分类标签</p><span>回复</span>			
+		</div>
+	</div>
+	<div class="answer">
+		
+		<div class="content">
+			<h4>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去</h4>
+			<p>天津市河北区新苑小区2号楼</p><span>2016-01-01</span>
+		</div>
+		<div class="return">
+			<h3>我：</h3><p>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签</p><span>回复</span>
+			<h3>旺旺：</h3><p>好</p><span>回复</span>
+			<h3>我：</h3><p>问答分类标签去问答分类标签</p>
+			<span>回复</span>
+		</div>
+	</div>
+	
+	<div class="answer answer_last">
+		
+		<div class="content">
+			<h4>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签去</h4>
+			<p>天津市河北区新苑小区2号楼</p><span>2016-01-01</span>
+		</div>
+		<div class="return">
+			<h3>我：</h3><p>问答分类标签去问答分类标签去问答分类标签去问答分类标签去问答分类标签</p><span>回复</span>
+			<h3>旺旺：</h3><p>好</p><span>回复</span>
+			<h3>我：</h3><p>问答分类标签去问答分类标签</p>
+			<span>回复</span>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	mui.plusReady(function() {
+      		mui(".choose")[0].addEventListener("tap",function(){
+				mui.openWindow({
+	  				url:"schoolScreen.html",
+	  				id:"schoolScreen",
+	  				show:{
+	  					aniShow:"none"
+	  				}
+	  			})
+			})
+      	})
+    </script>
+</html>

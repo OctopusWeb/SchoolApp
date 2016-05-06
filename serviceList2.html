@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+     <style>
+    	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
+    	.top{float: left;width: 60%;border-bottom: 1px #ccc solid;height: 25px;background: #fff;border-radius: 5px;
+    	border: 1px solid #00A1D8;margin: 5px 20%;overflow: hidden;}
+    	.top h1{float: left;width: 50%;font-size: 12px;line-height: 25px;color: #00A1D8;text-align: center;margin: 0;}
+    	.top .selected{background: #00A1D8;color: #fff;}
+    	.content{float: left;}
+    	.content .serviceLi{width: 100%;float: left;border-top:1px #ccc solid;border-bottom:1px #ccc solid;
+    	margin-top: 3px;background: #fff;position: relative;}
+    	.content .serviceLi .serviceName{width: 75%;float: left;}
+    	.content .serviceLi img{width: 40%;float: left;border-radius: 50%;padding: 10px;}
+    	.content .serviceLi h1{width: 60%;float: left;font-size: 16px;line-height: 25px;color: #00A1D8;font-weight: 600;margin: 0;}
+    	.content .serviceLi h2{width: 60%;float: left;font-size: 12px;color: #B5B5B5;margin: 0;line-height: 20px;}
+    	.content .serviceLi h4{font-size: 12px;line-height: 14px;float: left;border: 1px #b5b5b5 solid;color: #b5b5b5;padding:2px 5px;margin-left: 2px;}
+     	.content .serviceLi .serviceDo{width: 25%;float: left;}
+     	.content .serviceLi .serviceDo h3{width: 100%;float: left;text-align: right;font-size: 14px;color: red;padding-right: 10px;margin-top: 10px;}
+     	.content .serviceLi .serviceDo .call{width: 90%;float: left;display: block;margin-left: 5%;margin-top: 5px;}
+     	.content .serviceLi .serviceDo .call img{width: 100%;float: left;border-radius: 0;padding: 0;}
+     	.content .serviceLi .serviceInfo{width: 100%;float: left;border-top: 1px #ccc solid;}
+     	.content .serviceLi .serviceInfo p{width: 25%;font-size: 12px;float: left;text-align: center;border-right: 1px #ccc solid
+     	;margin: 0;line-height: 25px;}
+     	
+     	.content .serviceLied{border-top: 2px #c20000 solid;border-bottom: 2px #c20000 solid;}
+     	.content .serviceLied h1{color: #c20000;}
+     	.content .serviceLied .serviceDo h3{text-align: left;}
+     	.content .serviceLied .recom{position: absolute;right: 0;width: 30px;}
+     	.content .serviceLied .recom img{border-radius: 0;padding: 0;width: 100%;}
+     </style>
+</head>
+<body>
+	<div class="top">
+		<h1>活动列表</h1>
+		<h1 class="selected">产品服务</h1>
+	</div>
+	<div class="content">
+		<div class="serviceLi serviceLied">
+			<div class="recom">
+				<img src="images/recom.jpg"/>
+			</div>
+			<div class="serviceName">
+				<img src="images/head.png"/>
+				<h1>王小二</h1>
+				<h2>北京市海淀区海淀区海淀区</h2>
+				<h2>电话咨询 在线咨询</h2>
+				<h4>美国本科</h4>
+				<h4>美国研究生</h4>
+			</div>
+			<div class="serviceDo">
+				<h3>+关注</h3>
+				<div class="call">
+					<img src="images/call1.jpg"/>
+				</div>
+				<div class="call">
+					<img src="images/call2.jpg"/>
+				</div>
+			</div>
+			<div class="serviceInfo">
+				<p>从业 <strong>6</strong>年</p>
+				<p>助 <strong>8</strong>位学生</p>
+				<p>答 <strong>152</strong>个问题</p>
+				<p>共 <strong>125</strong>个关注</p>
+			</div>
+		</div>
+		<div class="serviceLi">
+			<div class="serviceName">
+				<img src="images/head.png"/>
+				<h1>王小二</h1>
+				<h2>北京市海淀区海淀区海淀区</h2>
+				<h2>电话咨询 在线咨询</h2>
+				<h4>美国本科</h4>
+				<h4>美国研究生</h4>
+			</div>
+			<div class="serviceDo">
+				<h3>+关注</h3>
+				<div class="call">
+					<img src="images/call3.jpg"/>
+				</div>
+				<div class="call">
+					<img src="images/call4.jpg"/>
+				</div>
+			</div>
+			<div class="serviceInfo">
+				<p>从业 <strong>6</strong>年</p>
+				<p>助 <strong>8</strong>位学生</p>
+				<p>答 <strong>152</strong>个问题</p>
+				<p>共 <strong>125</strong>个关注</p>
+			</div>
+		</div>
+		<div class="serviceLi">
+			<div class="serviceName">
+				<img src="images/head.png"/>
+				<h1>王小二</h1>
+				<h2>北京市海淀区海淀区海淀区</h2>
+				<h2>电话咨询 在线咨询</h2>
+				<h4>美国本科</h4>
+				<h4>美国研究生</h4>
+			</div>
+			<div class="serviceDo">
+				<h3>+关注</h3>
+				<div class="call">
+					<img src="images/call3.jpg"/>
+				</div>
+				<div class="call">
+					<img src="images/call4.jpg"/>
+				</div>
+			</div>
+			<div class="serviceInfo">
+				<p>从业 <strong>6</strong>年</p>
+				<p>助 <strong>8</strong>位学生</p>
+				<p>答 <strong>152</strong>个问题</p>
+				<p>共 <strong>125</strong>个关注</p>
+			</div>
+		</div>
+		<div class="serviceLi">
+			<div class="serviceName">
+				<img src="images/head.png"/>
+				<h1>王小二</h1>
+				<h2>北京市海淀区海淀区海淀区</h2>
+				<h2>电话咨询 在线咨询</h2>
+				<h4>美国本科</h4>
+				<h4>美国研究生</h4>
+			</div>
+			<div class="serviceDo">
+				<h3>+关注</h3>
+				<div class="call">
+					<img src="images/call3.jpg"/>
+				</div>
+				<div class="call">
+					<img src="images/call4.jpg"/>
+				</div>
+			</div>
+			<div class="serviceInfo">
+				<p>从业 <strong>6</strong>年</p>
+				<p>助 <strong>8</strong>位学生</p>
+				<p>答 <strong>152</strong>个问题</p>
+				<p>共 <strong>125</strong>个关注</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" charset="UTF-8">
+ (function($) {
+  	mui.init();
+  	mui.plusReady(function() {
+  		
+		for(var i=0;i<mui(".serviceLi").length;i++){
+			recomanEvent(i);
+		}
+		for(var i=0;i<mui(".serviceDo").length;i++){
+			serviceAdd(i);
+			serviceCall(i);
+			serviceWrite(i);
+		}
+		function serviceAdd(i){
+			mui(".serviceDo")[i].getElementsByTagName("h3")[0].addEventListener("tap",function(e){
+				e.stopPropagation();
+				if(mui(".serviceDo")[i].getElementsByTagName("h3")[0].innerHTML=="+关注"){
+					alert("关注成功")
+					mui(".serviceDo")[i].getElementsByTagName("h3")[0].innerHTML="已关注"
+				}else{
+					alert("成功取消关注")
+					mui(".serviceDo")[i].getElementsByTagName("h3")[0].innerHTML="+关注"
+				}
+				
+			})
+		}
+		function serviceCall(i){
+			mui(".serviceDo")[i].getElementsByClassName("call")[0].addEventListener("tap",function(e){
+				plus.device.dial( "10086", false );
+			})
+		}
+		function serviceWrite(i){
+			mui(".serviceDo")[i].getElementsByClassName("call")[1].addEventListener("tap",function(e){
+				e.stopPropagation();
+				mui.openWindow({
+					url:"releaseQues.html",
+					id:"releaseQues"
+				})
+			})
+		}
+		function recomanEvent(i){
+			mui(".serviceLi")[i].addEventListener("tap",function(e){
+				e.stopPropagation();
+				mui.openWindow({
+					url:"service2C.html",
+					id:"service2C"
+				})
+			})
+		}
+  		mui(".top h1")[0].addEventListener("tap",function(){
+  			mui.openWindow({
+  				url:"service.html",
+  				id:"service"
+  			})
+  		})
+
+ 	
+  	})
+})(mui);
+</script>
+</html>
