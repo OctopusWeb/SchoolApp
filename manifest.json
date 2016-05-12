@@ -166,28 +166,28 @@
 			},
 			"splashscreen": {
 				"ios": {
-					"iphone": {
-						"default": "C:/Users/Octospus/Desktop/first.png", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "C:/Users/Octospus/Desktop/first.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "C:/Users/Octospus/Desktop/first.png","retina55":"C:/Users/Octospus/Desktop/first.png","retina47":"C:/Users/Octospus/Desktop/first.png","retina55l":"C:/Users/Octospus/Desktop/first.png"
+					"iphone": {"default":"C:/Users/Octospus/Desktop/qidong/320480.png","retina55":"C:/Users/Octospus/Desktop/qidong/12422208.png","retina47":"C:/Users/Octospus/Desktop/qidong/7501334.png","retina40":"C:/Users/Octospus/Desktop/qidong/6401136.png","retina35":"C:/Users/Octospus/Desktop/qidong/640960.png","retina55l":"C:/Users/Octospus/Desktop/qidong/22081242.png"
+						 /*iPhone3启动图片选，分辨率：320x480*/
+						/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						
 					},
-					"ipad": {
-						"portrait": "C:/Users/Octospus/Desktop/first.png", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "C:/Users/Octospus/Desktop/first.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "C:/Users/Octospus/Desktop/first.png", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "C:/Users/Octospus/Desktop/first.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "C:/Users/Octospus/Desktop/first.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "C:/Users/Octospus/Desktop/first.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "C:/Users/Octospus/Desktop/first.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": "C:/Users/Octospus/Desktop/first.png"
+					"ipad": {"portrait":"C:/Users/Octospus/Desktop/qidong/7681004.png","portrait7":"C:/Users/Octospus/Desktop/qidong/7681024.png","landscape":"C:/Users/Octospus/Desktop/qidong/1024748.png","landscape7":"C:/Users/Octospus/Desktop/qidong/1024768.png","portrait-retina":"C:/Users/Octospus/Desktop/qidong/15362048.png","portrait-retina7":"C:/Users/Octospus/Desktop/qidong/15362048.png","landscape-retina":"C:/Users/Octospus/Desktop/qidong/20481496.png","landscape-retina7":"C:/Users/Octospus/Desktop/qidong/20481536.png"
+						 /*iPad竖屏启动图片，分辨率：768x1004*/
+						/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						 /*iPad横屏启动图片，分辨率：1024x748*/
+						 /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						 /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						 /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						
 					}
 				},
-				"android": {
-					"mdpi": "C:/Users/Octospus/Desktop/first.png", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "C:/Users/Octospus/Desktop/first.png", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/Octospus/Desktop/first.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/Octospus/Desktop/first.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/Octospus/Desktop/first.png"
+				"android": {"hdpi":"C:/Users/Octospus/Desktop/qidong/480762.png","ldpi":"C:/Users/Octospus/Desktop/qidong/320442.png","mdpi":"C:/Users/Octospus/Desktop/qidong/240282.png","xhdpi":"C:/Users/Octospus/Desktop/qidong/7201242.png","xxhdpi":"C:/Users/Octospus/Desktop/qidong/10801882.png"
+					 /*普通屏启动图片，分辨率：240x282*/
+					 /*大屏启动图片，分辨率：320x442*/
+					 /*高分屏启动图片，分辨率：480x762*/
+					 /*720P高分屏启动图片，分辨率：720x1242*/
+					
 				}
 			}
 		}

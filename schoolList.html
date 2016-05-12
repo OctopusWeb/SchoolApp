@@ -10,6 +10,11 @@
     	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
     	.mui-content{width: 100%;float: left;}
     	
+    	#nav .mui-active{color: #00A1D8;}
+    	#sliderProgressBar{background: #00A1D8;}
+    	.mui-btn{background: #00A1D8;border: 1px #00A1D8 solid;}
+    	#item2mobile .mui-btn-outlined{background: none;color: #00A1D8;}
+    	
     	#item1mobile .questions{width: 100%;float: left;background: #f2fafd;border-top: 1px #ccc solid;}
     	#item1mobile .title{color:#00A1D8;width: 100%;float: left;font-size: 16px;margin-left: 5%;padding: 5px 0;}
     	#item1mobile .questions .questionLi{width: 100%;padding: 10px 5%;position: relative;}
@@ -58,7 +63,7 @@
     	border-radius: 3px;margin-top: 20px;}
     	#nav{width: 100%;float: left;}
     	
-    	.addTalk{position: fixed;height: 80px;width: 18px;background: #00A1D8;left: 0;z-index: 100;color: #fff;font-size: 12px;text-align: center;padding-top: 8px;
+    	.addTalk{position: absolute;height: 80px;width: 18px;background: #00A1D8;left: 0;z-index: 100;color: #fff;font-size: 12px;text-align: center;padding-top: 8px;
     	border-radius: 3px;top: 50%;margin-top: -40px;line-height: 16px;}
     </style>
 </head>
@@ -68,17 +73,103 @@
 	    <div id="slider" class="mui-slider mui-fullscreen">
 				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<div class="mui-scroll" id="nav">
-						<a class="mui-control-item mui-active" href="#item1mobile" id="nav1">
-							院校点评
-						</a>
-						<a class="mui-control-item" href="#item2mobile" id="nav2">
+						<a class="mui-control-item mui-active" href="#item2mobile" id="nav1">
 							院校信息
+						</a>
+						<a class="mui-control-item" href="#item1mobile" id="nav2">
+							院校点评
 						</a>
 					</div>
 				</div>
 			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
 			<div class="mui-slider-group">
-				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+				<div id="item2mobile" class="mui-slider-item mui-control-content  mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view" id="ul2">
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+									<li class="schoolLi">
+										<img src="images/head.png" class="logo"/>
+										<div class="schoolInfo">
+											<img src="images/choose.png"/>
+											<h1>麻省理工学院</h1>
+											<h2>Massachusetts Institute of Technology</h2>
+											<h3>所在地:加州大学河滨校区</h3>
+											<h3>宿费:$4700|走读：$4000</h3>
+											<h3>学校类型:走读学校|大学预备|男女混校</h3>
+										</div>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
+										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item1mobile" class="mui-slider-item mui-control-content">
 					<div class="addTalk">院校点评</div>
 					<div id="scroll1" class="mui-scroll-wrapper">
 						<div class="mui-scroll">
@@ -299,92 +390,6 @@
 						</div>
 					</div>	
 				</div>
-				<div id="item2mobile" class="mui-slider-item mui-control-content">
-						<div class="mui-scroll-wrapper">
-							<div class="mui-scroll">
-								<ul class="mui-table-view" id="ul2">
-									<li class="schoolLi">
-										<img src="images/head.png" class="logo"/>
-										<div class="schoolInfo">
-											<img src="images/choose.png"/>
-											<h1>麻省理工学院</h1>
-											<h2>Massachusetts Institute of Technology</h2>
-											<h3>所在地:加州大学河滨校区</h3>
-											<h3>宿费:$4700|走读：$4000</h3>
-											<h3>学校类型:走读学校|大学预备|男女混校</h3>
-										</div>
-										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
-										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
-									</li>
-									<li class="schoolLi">
-										<img src="images/head.png" class="logo"/>
-										<div class="schoolInfo">
-											<img src="images/choose.png"/>
-											<h1>麻省理工学院</h1>
-											<h2>Massachusetts Institute of Technology</h2>
-											<h3>所在地:加州大学河滨校区</h3>
-											<h3>宿费:$4700|走读：$4000</h3>
-											<h3>学校类型:走读学校|大学预备|男女混校</h3>
-										</div>
-										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
-										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
-									</li>
-									<li class="schoolLi">
-										<img src="images/head.png" class="logo"/>
-										<div class="schoolInfo">
-											<img src="images/choose.png"/>
-											<h1>麻省理工学院</h1>
-											<h2>Massachusetts Institute of Technology</h2>
-											<h3>所在地:加州大学河滨校区</h3>
-											<h3>宿费:$4700|走读：$4000</h3>
-											<h3>学校类型:走读学校|大学预备|男女混校</h3>
-										</div>
-										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
-										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
-									</li>
-									<li class="schoolLi">
-										<img src="images/head.png" class="logo"/>
-										<div class="schoolInfo">
-											<img src="images/choose.png"/>
-											<h1>麻省理工学院</h1>
-											<h2>Massachusetts Institute of Technology</h2>
-											<h3>所在地:加州大学河滨校区</h3>
-											<h3>宿费:$4700|走读：$4000</h3>
-											<h3>学校类型:走读学校|大学预备|男女混校</h3>
-										</div>
-										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
-										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
-									</li>
-									<li class="schoolLi">
-										<img src="images/head.png" class="logo"/>
-										<div class="schoolInfo">
-											<img src="images/choose.png"/>
-											<h1>麻省理工学院</h1>
-											<h2>Massachusetts Institute of Technology</h2>
-											<h3>所在地:加州大学河滨校区</h3>
-											<h3>宿费:$4700|走读：$4000</h3>
-											<h3>学校类型:走读学校|大学预备|男女混校</h3>
-										</div>
-										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
-										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
-									</li>
-									<li class="schoolLi">
-										<img src="images/head.png" class="logo"/>
-										<div class="schoolInfo">
-											<img src="images/choose.png"/>
-											<h1>麻省理工学院</h1>
-											<h2>Massachusetts Institute of Technology</h2>
-											<h3>所在地:加州大学河滨校区</h3>
-											<h3>宿费:$4700|走读：$4000</h3>
-											<h3>学校类型:走读学校|大学预备|男女混校</h3>
-										</div>
-										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">立即申请</button>
-										<button type="button" class="mui-btn mui-btn-primary">评论(65)</button>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>	
 				</div>
 			</div>
 		</div>

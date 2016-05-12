@@ -195,7 +195,7 @@
 	    <h1 class="mui-title">问答详情</h1>
 	</header>
 	<div class="foot mui-bar">
-		<input type="text" placeholder="评论">
+		<input type="text" placeholder="评论" id="talk">
 		<span class="mui-icon mui-icon-chat"></span>
 	</div>
 	<div class="mui-content">
@@ -249,6 +249,18 @@
       		mui.previewImage();
       	}
       	mui.plusReady(function() {
+      		mui(".mui-icon-chat")[0].addEventListener("tap",function(e){
+      			e.stopPropagation()
+      			var talk={name:"我",img:"images/head.png",loca:localStorage["nowAddress"],val:mui("#talk")[0].value}
+      			console.log(JSON.stringify(talk))
+      			var addTalk=mui(".comments")[0].innerHTML;
+      			var addTalk1='<div class="commentsLi"><img src="'+talk.img+'"/>'+
+	    		'<h2>'+talk.name+'</h2><h3>|'+talk.loca+'</h3>'+
+	    		'<h4>'+talk.val+'</h4></div>'
+	    		addTalk+=addTalk1;
+	    		mui(".comments")[0].innerHTML=addTalk;
+	    		mui("#talk")[0].value=""
+      		})
 	    })
     </script>
 </html>

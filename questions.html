@@ -8,7 +8,78 @@
     <link href="css/mui.min.css" rel="stylesheet"/>
     <style type="text/css">
     	*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";font-weight: 400;}
-    	.top{float: left;height: 32px;background: #00A1D8;width: 100%;}
+    	
+    	.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas { 
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+			}
+    	
+    	.top{position:fixed;height: 32px;background: #00A1D8;width: 100%;z-index: 1000;top: 0;}
     	.top ul{float: left;width: 85%;overflow: hidden;height: 30px;margin-left: 5%;}
     	.top ul li{float: left;width: auto;height: 30px;}
     	.top ul li h1{float: left;width: auto;font-size: 12px;color: #9ad1ef;padding: 0 5px;line-height: 20px;}
@@ -75,214 +146,1264 @@
     	.content .questions .questionLi .talkMore  h4{width: 100%;text-align: center;float: left;color: #00A1D8;
     	font-size: 14px;margin-top: 10px;margin-bottom: 0;display: block;}
     	.content .questions .questionLi .talkHide{display: none;}
+    	
+    	#slider #sliderSegmentedControl .mui-control-item{padding-right: 0px;padding-left: 5px;font-size: 12px;}
     </style>
 </head>
 <body>
 	<div class="mui-content">
 		<div id="addTalk"><img src="images/addTalk.png"/></div>
-	    <div class="top">
-	    	<ul>
-	    		<li><h1>最热</h1></li>
-	    		<li class="selected"><h1>择校评估</h1></li>
-	    		<li><h1>申请面试</h1></li>
-	    		<li><h1>考试培训</h1></li>
-	    		<li><h1>学业生活</h1></li>
-	    		<li><h1>签证出行</h1></li>
-	    		<li><h1>书籍资料</h1></li>
-	    		<li><h1>夏校夏令营</h1></li>
-	    	</ul>
-	    	<div class="right">
-	    		<div class="more">
-		    		<span class="mui-icon-arrowdown mui-icon"></span>
-		    		<span class="mui-icon-arrowright mui-icon"></span>
-		    	</div>
-	    	</div>
-	    	
-	    </div>
-	    <div class="menuList">
-	    	<h1>最热</h1>
-    		<h1>择校评估</h1>
-    		<h1>申请面试</h1>
-    		<h1>考试培训</h1>
-    		<h1>学业生活</h1>
-    		<h1>签证出行</h1>
-    		<h1>书籍资料</h1>
-    		<h1>夏校夏令营</h1>
-	    </div>
-	    <div class="content">
-	    	<div class="waitAn">
-	    		<div class="questionsWait">
-	    			<h2>等你来答</h2>
-	    			<h3>MORE>></h3>
-	    		</div>
-	    		<div class="waitLi">
-	    			<span>择校评估 |</span>
-	    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
-	    			<span class="seeAll">.....查看全部</span>
-		    		<div class="answer">
-		    			<span class="mui-icon-chat mui-icon"></span>
-		    			<h4>回答</h4>
-		    		</div>
-	    		</div>
-	    		<div class="waitLi">
-	    			<span>择校评估 |</span>
-	    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
-	    			<span class="seeAll">.....查看全部</span>
-		    		<div class="answer">
-		    			<span class="mui-icon-chat mui-icon"></span>
-		    			<h4>回答</h4>
-		    		</div>
-	    		</div>
-	    	</div>
-	    	<div class="recomSchool">
-	    		<div class="school">
-	    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
-	    			<h2>寄宿中学，大学储备，9-12年级</h2>
-	    		</div>
-	    		<div class="school">
-	    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
-	    			<h2>寄宿中学，大学储备，9-12年级</h2>
-	    		</div>
-	    		<div class="school">
-	    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
-	    			<h2>寄宿中学，大学储备，9-12年级</h2>
-	    		</div>
-	    	</div>
-	    	<div class="questions">
-	    		<div class="questionLi">
-	    			<div class="head">
-	    				<img src="images/head.png" class="head"/>
-	    				<h1>章子怡</h1>
-	    			</div>
-	    			<div class="word">
-	    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
-	    				<span class="seeAll">.....查看全部</span>
-	    			</div>
-	    			<div class="info">
-	    				<p>最热</p><p>热门</p>
-	    				<div class="talk">
-	    					<span>1</span>
-	    					<img src="images/talk.png"/>
-	    				</div>
-	    				<span>分享</span>
-	    				<img src="images/enjoy.png"/>
-	    				<span>1</span>
-	    				<img src="images/like.png"/>
-	    			</div>
-	    			<div class="talkMore talkHide">
-	    				<img src="images/like.png"/>
-	    				<p>章子怡</p>
-	    				<h1>回复</h1>
-	    				<div class="reply">
-	    					<h2>章子怡:</h2>
-	    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
-	    					<span class="seeAll">.....查看全部</span>
-	    				</div>
-	    				<div class="reply">
-	    					<h2>章子怡:</h2>
-	    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
-	    					<span class="seeAll">.....查看全部</span>
-	    				</div>
-	    				<div class="reply">
-	    					<h2>章子怡:</h2>
-	    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
-	    					<span class="seeAll">.....查看全部</span>
-	    				</div>
-	    				<h4>收起>></h4>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	<div class="questions">
-	    		<div class="questionLi">
-	    			<div class="head">
-	    				<img src="images/head.png" class="head"/>
-	    				<h1>章子怡</h1>
-	    			</div>
-	    			<div class="word">
-	    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
-	    				<span class="seeAll">.....查看全部</span>
-	    			</div>
-	    			<div class="info">
-	    				<p>最热</p><p>热门</p>
-	    				<div class="talk">
-	    					<span>1</span>
-	    					<img src="images/talk.png"/>
-	    				</div>
-	    				<span>分享</span>
-	    				<img src="images/enjoy.png"/>
-	    				<span>1</span>
-	    				<img src="images/like.png"/>
-	    			</div>
-	    			<div class="talkMore talkHide">
-	    				<img src="images/like.png"/>
-	    				<p>章子怡</p>
-	    				<h1>回复</h1>
-	    				<div class="reply">
-	    					<h2>章子怡:</h2>
-	    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
-	    					<span class="seeAll">.....查看全部</span>
-	    				</div>
-	    				<div class="reply">
-	    					<h2>章子怡:</h2>
-	    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
-	    					<span class="seeAll">.....查看全部</span>
-	    				</div>
-	    				<div class="reply">
-	    					<h2>章子怡:</h2>
-	    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
-	    					<span class="seeAll">.....查看全部</span>
-	    				</div>
-	    				<h4>收起>></h4>
-	    			</div>
-	    		</div>
-	    	</div>
-	    	
-	    </div>
+	    <div id="slider" class="mui-slider mui-fullscreen">	
+	    	<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll">
+					<a class="mui-control-item mui-active" href="#item1mobile">
+						最热
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						择校评估
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						申请面试
+					</a>
+					<a class="mui-control-item" href="#item4mobile">
+						考试培训
+					</a>
+					<a class="mui-control-item" href="#item5mobile">
+						学业生活
+					</a>
+					<a class="mui-control-item" href="#item6mobile">
+						签证出行
+					</a>
+					<a class="mui-control-item" href="#item6mobile">
+						书籍资料
+					</a>
+					<a class="mui-control-item" href="#item6mobile">
+						夏校夏令营
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+						    	<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>
+						</div>
+					</div>	
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+						</div>
+					</div>
+				<div id="item3mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+						</div>
+					</div>	
+				<div id="item4mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+						</div>
+					</div>	
+				<div id="item5mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+						</div>
+					</div>	
+				<div id="item6mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+						</div>
+					</div>	
+				<div id="item7mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+						</div>
+					</div>	
+				<div id="item8mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="content">
+							<div class="waitAn">
+						    		<div class="questionsWait">
+						    			<h2>等你来答</h2>
+						    			<h3>MORE>></h3>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多，DCloud为了数坑。但我放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    		<div class="waitLi">
+						    			<span>择校评估 |</span>
+						    			<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多，DCloud了无数坑放弃，我们加入了W3C，发起了HTML5中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    			<span class="seeAll">.....查看全部</span>
+							    		<div class="answer">
+							    			<span class="mui-icon-chat mui-icon"></span>
+							    			<h4>回答</h4>
+							    		</div>
+						    		</div>
+						    	</div>
+						    	<div class="recomSchool">
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    		<div class="school">
+						    			<h1>康科德中学<strong>|Concor Academy</strong></h1>
+						    			<h2>寄宿中学，大学储备，9-12年级</h2>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    	<div class="questions">
+						    		<div class="questionLi">
+						    			<div class="head">
+						    				<img src="images/head.png" class="head"/>
+						    				<h1>章子怡</h1>
+						    			</div>
+						    			<div class="word">
+						    				<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>
+						    				<span class="seeAll">.....查看全部</span>
+						    			</div>
+						    			<div class="info">
+						    				<p>最热</p><p>热门</p>
+						    				<div class="talk">
+						    					<span>1</span>
+						    					<img src="images/talk.png"/>
+						    				</div>
+						    				<span>分享</span>
+						    				<img src="images/enjoy.png"/>
+						    				<span>1</span>
+						    				<img src="images/like.png"/>
+						    			</div>
+						    			<div class="talkMore talkHide">
+						    				<img src="images/like.png"/>
+						    				<p>章子怡</p>
+						    				<h1>回复</h1>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<div class="reply">
+						    					<h2>章子怡:</h2>
+						    					<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>
+						    					<span class="seeAll">.....查看全部</span>
+						    				</div>
+						    				<h4>收起>></h4>
+						    			</div>
+						    		</div>
+						    	</div>
+						    </div>	
+						</div>
+					</div>
+					</div>	
+			</div>
+		</div>
 	</div>
 </body>
+<script src="js/mui.pullToRefresh.js"></script>
+<script src="js/mui.pullToRefresh.material.js"></script>
 <script type="text/javascript" charset="UTF-8">
+ (function($) {
   	mui.init();
   	mui.plusReady(function() {
+  		$('.mui-scroll-wrapper').scroll({
+			bounce: false,
+			indicators: true
+		});
+		$.ready(function() {
+			var indexWord=mui(".content")[0].innerHTML;
+			//循环初始化所有下拉刷新，上拉加载。
+			$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+				$(pullRefreshEl).pullToRefresh({
+					down: {
+						callback: function() {
+							var self = this;
+							setTimeout(function() {
+								var ul = self.element.querySelector('.content');
+								ul.innerHTML=indexWord;
+//								ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+								self.endPullDownToRefresh();
+							}, 1000);
+						}
+					},
+					up: {
+						callback: function() {
+							var self = this;
+							setTimeout(function() {
+								var ul = self.element.querySelector('.content');
+								ul.appendChild(createFragment(ul, index, 5));
+								self.endPullUpToRefresh();
+							}, 1000);
+						}
+					}
+				});
+			});
+			var createFragment = function(ul, index, count, reverse) {
+				var length = ul.querySelectorAll('li').length;
+				var fragment = document.createDocumentFragment();
+				var li;
+				for (var i = 0; i < count; i++) {
+					li = document.createElement('div');
+					li.className = 'questions';
+					li.innerHTML = '<div class="questionLi">'+
+						    			'<div class="head">'+
+						    				'<img src="images/head.png" class="head"/>'+
+						    				'<h1>章子怡</h1>'+
+						    			'</div>'+
+						    			'<div class="word">'+
+						    				'<p>HTML5自出现以来，几经风雨，虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟，推出了HBuilder、HTML5plus runtime、mui框架等产品，直到我们终于可以使用HTML5开发出原生体验的App，并且把这些技术公开给开发者。</p>'+
+						    				'<span class="seeAll">.....查看全部</span>'+
+						    			'</div>'+
+						    			'<div class="info">'+
+						    				'<p>最热</p><p>热门</p>'+
+						    				'<div class="talk">'+
+						    					'<span>1</span>'+
+						    					'<img src="images/talk.png"/>'+
+						    				'</div>'+
+						    				'<span>分享</span>'+
+						    				'<img src="images/enjoy.png"/>'+
+						    				'<span>1</span>'+
+						    				'<img src="images/like.png"/>'+
+						    			'</div>'+
+						    			'<div class="talkMore talkHide">'+
+						    				'<img src="images/like.png"/>'+
+						    				'<p>章子怡</p>'+
+						    				'<h1>回复</h1>'+
+						    				'<div class="reply">'+
+						    					'<h2>章子怡:</h2>'+
+						    					'<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>'+
+						    					'<span class="seeAll">.....查看全部</span>'+
+						    				'</div>'+
+						    				'<div class="reply">'+
+						    					'<h2>章子怡:</h2>'+
+						    					'<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>'+
+						    					'<span class="seeAll">.....查看全部</span>'+
+						    				'</div>'+
+						    				'<div class="reply">'+
+						    					'<h2>章子怡:</h2>'+
+						    					'<h3>HTML5自出现以来，几经风雨虽看似很有前途，但实际使用问题太多。但我们从未放弃，我们加入了W3C，发起了中国产业联盟</h3>'+
+						    					'<span class="seeAll">.....查看全部</span>'+
+						    				'</div>'+
+						    				'<h4>收起>></h4>'+
+						    			'</div>'+
+						    		'</div>'
+					fragment.appendChild(li);
+				}
+				return fragment;
+			};
+		});
   		
-  		mui(".mui-icon-arrowdown")[0].style.display="none";
-  		mui(".menuList")[0].style.display="none"
-  		mui(".right")[0].addEventListener("tap",function(e){
-  			e.stopPropagation();
-  			var iconType=mui(".mui-icon-arrowdown")[0].style.display;
-  			if(iconType=="none"){
-  				mui(".mui-icon-arrowdown")[0].style.display="block"
-  				mui(".mui-icon-arrowright")[0].style.display="none"
-  				mui(".menuList")[0].style.display="block"
-  			}else{
-  				mui(".mui-icon-arrowdown")[0].style.display="none"
-  				mui(".mui-icon-arrowright")[0].style.display="block"
-  				mui(".menuList")[0].style.display="none"
-  				}
-  		})
+//		mui(".mui-icon-arrowdown")[0].style.display="none";
+//		mui(".menuList")[0].style.display="none"
+//		mui(".right")[0].addEventListener("tap",function(e){
+//			e.stopPropagation();
+//			var iconType=mui(".mui-icon-arrowdown")[0].style.display;
+//			if(iconType=="none"){
+//				mui(".mui-icon-arrowdown")[0].style.display="block"
+//				mui(".mui-icon-arrowright")[0].style.display="none"
+//				mui(".menuList")[0].style.display="block"
+//			}else{
+//				mui(".mui-icon-arrowdown")[0].style.display="none"
+//				mui(".mui-icon-arrowright")[0].style.display="block"
+//				mui(".menuList")[0].style.display="none"
+//				}
+//		})
+//		mui("body")[0].addEventListener("tap",function(e){
+//			e.stopPropagation();
+//			mui(".mui-icon-arrowdown")[0].style.display="none"
+//			mui(".mui-icon-arrowright")[0].style.display="block"
+//			mui(".menuList")[0].style.display="none"
+//		})
+//		for(var i=0;i<mui(".top ul li").length;i++){
+//			addClass(mui(".top ul li"),i)
+//		}
+//		for(var i=0;i<mui(".menuList h1").length;i++){
+//			addClass(mui(".menuList h1"),i);
+//		}
+//		function addClass(cla,i){
+//			cla[i].addEventListener("tap",function(){
+//				location.href="#item1mobile"
+//				for(var j=0;j<mui(".top ul li").length;j++){
+//					mui(".top ul li")[j].className="";
+//					mui(".mui-slider-item")[j].className="mui-slider-item mui-control-content"
+//				}
+//				mui(".top ul li")[i].className="selected";
+//				mui(".mui-slider-item")[i].className="mui-slider-item mui-control-content mui-active"
+//			})
+//		}
   		mui("#addTalk")[0].addEventListener("tap",function(){
   			mui.openWindow({
-  				url:"releaseQues.html",
-  				id:"releaseQues"
+  				url:"releaseQues2.html",
+  				id:"releaseQues2"
   			})
   		})
-  		mui("body")[0].addEventListener("tap",function(e){
-  			e.stopPropagation();
-  			mui(".mui-icon-arrowdown")[0].style.display="none"
-  			mui(".mui-icon-arrowright")[0].style.display="block"
-  			mui(".menuList")[0].style.display="none"
-  		})
+
   		mui(".questionsWait")[0].addEventListener("tap",function(){
   			mui.openWindow({
   				url:"questionsWait.html",
   				id:"questionsWait"
   			})
   		})
-  		for(var i=0;i<mui(".top ul li").length;i++){
-  			addClass(mui(".top ul li"),i)
-  		}
-  		for(var i=0;i<mui(".menuList h1").length;i++){
-  			addClass(mui(".menuList h1"),i);
-  		}
+
   		for(var i=0;i<mui(".seeAll").length;i++){
   			seeAll(i);
   		}
@@ -298,14 +1419,25 @@
   		for (var i=0;i<mui(".answer").length;i++) {
   			questionsInfo(mui(".answer")[i]);
   		}
-  		function addClass(cla,i){
-  			cla[i].addEventListener("tap",function(){
-  				for(var j=0;j<mui(".top ul li").length;j++){
-  					mui(".top ul li")[j].className="";
-  				}
-  				mui(".top ul li")[i].className="selected";
-  			})
-  		}
+  		
+  		document.getElementById('slider').addEventListener('slide', function(e) {
+
+//			if (e.detail.slideNumber === 0) {
+//				if (item2.querySelector('.mui-loading')) {
+//					setTimeout(function() {
+//						item2.querySelector('.mui-scroll').innerHTML = html2;
+//					}, 0);
+//				}
+//			} else if (e.detail.slideNumber === 1) {
+//				if (item3.querySelector('.mui-loading')) {
+//					setTimeout(function() {
+//						item3.querySelector('.mui-scroll').innerHTML = html3;
+//					}, 0);
+//				}
+//			}
+		});
+  		
+
   		function seeAll(i){
   			mui(".seeAll")[i].addEventListener("tap",function(e){
   				e.stopPropagation();
@@ -345,5 +1477,6 @@
   			
   		}
   	})
+ })(mui); 	
 </script>
 </html>

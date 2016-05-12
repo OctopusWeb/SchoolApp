@@ -12,7 +12,8 @@
     	.mui-bar .logo{float: left;height: 30px;margin-top: 25px;width: 10%;position: relative;}
     	.mui-bar .logo img{height: 35px;width: 28px;position: absolute;right: 0;top: -4px;}
     	.mui-bar .mui-input-row{width: 60%;height: 40px;position: absolute;top: 20px;left: 20%;}
-    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;}
+    	.mui-bar .mui-input-row #search{border-radius: 50px;background: #fff;height: 30px;margin-top: 5px;font-size: 12px;}
+    	.mui-bar .mui-input-row #icon{z-index: 100;color: #000;position: absolute;top: -2px;right: 5px;}
     	.mui-bar .choose{width: 10%;float: right;height: 30px;margin-top: 15px;}
     	.mui-bar .choose span{color: #fff;font-size: 25px;float: left;}
     	.mui-bar .choose h1{color: #fff;font-size: 14px;float: left;margin-top: -13px;}
@@ -52,7 +53,8 @@
 			<img src="images/logo.jpg" alt="高中网" />
 		</div>
 		<div class="mui-input-row mui-search mui-plus-visible" id="searchInput">
-			<input id="search" type="search" class="mui-input-speech mui-input-clear" placeholder="请输入搜索内容">
+			<span class="mui-icon-search mui-icon" id="icon"></span>
+			<input id="search" type="text"  placeholder="请输入搜索内容">
 		</div>
 		<div class="choose">
 			<span class="mui-icon-list mui-icon"></span>
@@ -102,6 +104,18 @@
 <script type="text/javascript" charset="UTF-8">
       	mui.init();
       	mui.plusReady(function() {
+      		mui("#search")[0].onblur=function(){
+	  			mui.openWindow({
+	  				url:"schoolFinish.html",
+	  				id:"schoolFinish"
+	  			})
+	  		}
+      		mui("#icon")[0].addEventListener("tap",function(){
+	  			mui.openWindow({
+	  				url:"schoolFinish.html",
+	  				id:"schoolFinish"
+	  			})
+	  		})
       		mui(".choose")[0].addEventListener("tap",function(){
 				mui.openWindow({
 	  				url:"schoolScreen.html",
